@@ -53,7 +53,7 @@ export default function DashboardPage() {
             </CardContent>
           </Card>
 
-          <Card className="hover:shadow-lg transition-shadow">
+          <Card className="hover:shadow-lg transition-shadow cursor-pointer" onClick={() => router.push('/study')}>
             <CardHeader>
               <div className="w-12 h-12 bg-blue-100 dark:bg-blue-900/20 rounded-full flex items-center justify-center mb-2">
                 <BookOpen className="w-6 h-6 text-blue-600 dark:text-blue-400" />
@@ -62,8 +62,8 @@ export default function DashboardPage() {
               <CardDescription>עיון בשאלות ללא ניקוד</CardDescription>
             </CardHeader>
             <CardContent>
-              <Button variant="outline" className="w-full" disabled>
-                בקרוב
+              <Button variant="outline" className="w-full">
+                התחל לימוד
               </Button>
             </CardContent>
           </Card>
