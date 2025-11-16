@@ -58,7 +58,7 @@ export default function GamePlayPage({ params }: PageProps) {
 
       if (questionsError) throw questionsError
 
-      return { game, questions: gameQuestions }
+      return { game, questions: gameQuestions as any }
     },
   })
 
@@ -75,8 +75,8 @@ export default function GamePlayPage({ params }: PageProps) {
       timeTaken: number
       isCorrect: boolean
     }) => {
-      const { error } = await supabase
-        .from('game_questions')
+      const { error } = await (supabase
+        .from('game_questions') as any)
         .update({
           selected_answer_id: answerId,
           time_taken: timeTaken,
@@ -96,15 +96,15 @@ export default function GamePlayPage({ params }: PageProps) {
     mutationFn: async () => {
       if (!gameData) return
 
-      const correctCount = gameData.questions.filter((q) => q.is_correct).length
+      const correctCount = gameData.questions.filter((q: any) => q.is_correct).length
       const totalQuestions = gameData.questions.length
       const scorePercentage = Math.round((correctCount / totalQuestions) * 100)
       const avgTime = Math.round(
-        gameData.questions.reduce((sum, q) => sum + (q.time_taken || 0), 0) / totalQuestions
+        gameData.questions.reduce((sum: any, q: any) => sum + (q.time_taken || 0), 0) / totalQuestions
       )
 
-      const { error } = await supabase
-        .from('games')
+      const { error } = await (supabase
+        .from('games') as any)
         .update({
           correct_answers: correctCount,
           score_percentage: scorePercentage,
@@ -151,7 +151,7 @@ export default function GamePlayPage({ params }: PageProps) {
     setIsTimerRunning(false)
     const currentQuestion = gameData.questions[currentQuestionIndex]
     const selectedAnswer = currentQuestion.question.answers.find(
-      (a) => a.id === selectedAnswerId
+      (a: any) => a.id === selectedAnswerId
     )
 
     if (!selectedAnswer) return
@@ -218,11 +218,11 @@ export default function GamePlayPage({ params }: PageProps) {
   }
 
   if (gameCompleted) {
-    const correctCount = gameData.questions.filter((q) => q.is_correct).length
+    const correctCount = gameData.questions.filter((q: any) => q.is_correct).length
     const totalQuestions = gameData.questions.length
     const scorePercentage = Math.round((correctCount / totalQuestions) * 100)
     const avgTime = Math.round(
-      gameData.questions.reduce((sum, q) => sum + (q.time_taken || 0), 0) / totalQuestions
+      gameData.questions.reduce((sum: any, q: any) => sum + (q.time_taken || 0), 0) / totalQuestions
     )
 
     return (

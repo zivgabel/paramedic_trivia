@@ -30,7 +30,7 @@ export default function GameSetupPage() {
         .order('name')
 
       if (error) throw error
-      return data
+      return data as any
     },
   })
 
@@ -52,7 +52,7 @@ export default function GameSetupPage() {
 
   const selectAll = () => {
     if (categories) {
-      setSelectedCategories(categories.map((c) => c.id))
+      setSelectedCategories(categories.map((c: any) => c.id))
     }
   }
 
@@ -76,8 +76,8 @@ export default function GameSetupPage() {
 
     try {
       // Create game
-      const { data: game, error: gameError } = await supabase
-        .from('games')
+      const { data: game, error: gameError } = await (supabase
+        .from('games') as any)
         .insert({
           user_id: user!.id,
           total_questions: questionCount,
@@ -91,8 +91,8 @@ export default function GameSetupPage() {
       if (gameError) throw gameError
 
       // Link categories to game
-      const { error: categoriesError } = await supabase
-        .from('game_categories')
+      const { error: categoriesError } = await (supabase
+        .from('game_categories') as any)
         .insert(
           selectedCategories.map((categoryId) => ({
             game_id: game.id,
@@ -112,7 +112,7 @@ export default function GameSetupPage() {
       if (questionsError) throw questionsError
 
       // Shuffle and limit questions
-      const shuffled = questions.sort(() => Math.random() - 0.5)
+      const shuffled = (questions as any).sort(() => Math.random() - 0.5)
       const selectedQuestions = shuffled.slice(0, questionCount)
 
       if (selectedQuestions.length < questionCount) {
@@ -121,10 +121,10 @@ export default function GameSetupPage() {
       }
 
       // Link questions to game
-      const { error: gameQuestionsError } = await supabase
-        .from('game_questions')
+      const { error: gameQuestionsError } = await (supabase
+        .from('game_questions') as any)
         .insert(
-          selectedQuestions.map((q, index) => ({
+          selectedQuestions.map((q: any, index: number) => ({
             game_id: game.id,
             question_id: q.id,
             question_order: index + 1,
@@ -183,7 +183,7 @@ export default function GameSetupPage() {
                 <div className="text-center py-8">טוען קטגוריות...</div>
               ) : categories && categories.length > 0 ? (
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
-                  {categories.map((category) => (
+                  {categories.map((category: any) => (
                     <div
                       key={category.id}
                       className="flex items-center space-x-2 space-x-reverse p-3 border rounded-lg hover:bg-accent cursor-pointer"
