@@ -1,0 +1,1221 @@
+{
+  "metadata": {
+    "total_questions": 100,
+    "source": "kp8_second_edition.pdf",
+    "created": "2025-11-17"
+  },
+  "questions": [
+    {
+      "category": "אנטומיה",
+      "level": "basic",
+      "question": "מהו תפקיד המסתם האורטלי בלב?",
+      "answers": [
+        {"text": "מונע זרימה חוזרת של דם מהאאורטה לחדר שמאל", "correct": true},
+        {"text": "מונע זרימה חוזרת של דם מהעליה השמאלית לחדר שמאל", "correct": false},
+        {"text": "מפריד בין החדר הימני לחדר השמאלי", "correct": false},
+        {"text": "מאפשר זרימת דם מהעליה לאאורטה", "correct": false}
+      ],
+      "explanation": "המסתם האורטלי נמצא בין החדר השמאלי לאאורטה ומונע זרימה חוזרת של דם בזמן הדיאסטולה."
+    },
+    {
+      "category": "אנטומיה",
+      "level": "basic",
+      "question": "איזה איבר נמצא ב-Mediastinum?",
+      "answers": [
+        {"text": "הלב", "correct": true},
+        {"text": "הכליות", "correct": false},
+        {"text": "הכבד", "correct": false},
+        {"text": "הטחול", "correct": false}
+      ],
+      "explanation": "המדיאסטינום הוא החלל בחזה שבין שתי הריאות ובו נמצאים הלב, הקנה והוושט."
+    },
+    {
+      "category": "אנטומיה",
+      "level": "intermediate",
+      "question": "מהו הסדר הנכון של זרימת הדם בלב?",
+      "answers": [
+        {"text": "עליה ימנית → חדר ימני → ריאות → עליה שמאלית → חדר שמאלי → אאורטה", "correct": true},
+        {"text": "חדר ימני → עליה ימנית → ריאות → חדר שמאלי → עליה שמאלית → אאורטה", "correct": false},
+        {"text": "עליה ימנית → ריאות → חדר ימני → עליה שמאלית → חדר שמאלי → אאורטה", "correct": false},
+        {"text": "עליה שמאלית → חדר שמאלי → ריאות → עליה ימנית → חדר ימני → אאורטה", "correct": false}
+      ],
+      "explanation": "הדם מגיע מהגוף לעליה הימנית, עובר לחדר הימני, משם לריאות להחמצן, חוזר לעליה השמאלית, לחדר השמאלי ומשם לאאורטה."
+    },
+    {
+      "category": "אנטומיה",
+      "level": "basic",
+      "question": "איזה עצב מעצבב את הלב כחלק מהמערכת הפרא-סימפתטית?",
+      "answers": [
+        {"text": "עצב הוואגוס (Vagus)", "correct": true},
+        {"text": "עצב הפריניק (Phrenic)", "correct": false},
+        {"text": "עצב הפמורל (Femoral)", "correct": false},
+        {"text": "עצב הרדיאלי (Radial)", "correct": false}
+      ],
+      "explanation": "עצב הוואגוס הוא חלק מהמערכת הפרא-סימפתטית ומאט את קצב הלב."
+    },
+    {
+      "category": "אנטומיה",
+      "level": "intermediate",
+      "question": "מהו Cardiac Plexus?",
+      "answers": [
+        {"text": "צבר עצבים סימפתטי שמעצבב את הלב", "correct": true},
+        {"text": "מסתם בין החדר לעליה", "correct": false},
+        {"text": "כלי דם המזין את שריר הלב", "correct": false},
+        {"text": "חלק ממערכת ההולכה החשמלית בלב", "correct": false}
+      ],
+      "explanation": "ה-Cardiac Plexus הוא צבר עצבים השייך למערכת הסימפתטית ומעצבב את הלב, משפיע על קצב הלב וכוח ההתכווצות."
+    },
+    {
+      "category": "אנטומיה",
+      "level": "advanced",
+      "question": "מהו Cardiac Septum?",
+      "answers": [
+        {"text": "המחיצה המפרידה בין החדר הימני לשמאלי", "correct": true},
+        {"text": "המסתם בין העליה לחדר", "correct": false},
+        {"text": "שכבת השריר החיצונית של הלב", "correct": false},
+        {"text": "הכיס המקיף את הלב", "correct": false}
+      ],
+      "explanation": "ה-Cardiac Septum הוא המחיצה החדרית המפרידה בין החדר הימני לשמאלי."
+    },
+    {
+      "category": "אנטומיה",
+      "level": "basic",
+      "question": "איזה איבר מפריש Epinephrine (אדרנלין)?",
+      "answers": [
+        {"text": "Adrenal Medulla (חלק הפנימי של בלוטת יותרת הכליה)", "correct": true},
+        {"text": "Adrenal Cortex (חלק החיצוני של בלוטת יותרת הכליה)", "correct": false},
+        {"text": "הלבלב", "correct": false},
+        {"text": "בלוטת התריס", "correct": false}
+      ],
+      "explanation": "Epinephrine מופרש מה-Adrenal Medulla, החלק הפנימי של בלוטת יותרת הכליה."
+    },
+    {
+      "category": "אנטומיה",
+      "level": "intermediate",
+      "question": "מהו האפיגלוטיס (Epiglottis)?",
+      "answers": [
+        {"text": "סחוס המכסה את הקנה בזמן בליעה", "correct": true},
+        {"text": "פתח הקנה", "correct": false},
+        {"text": "מיתרי הקול", "correct": false},
+        {"text": "הסימפון הראשי", "correct": false}
+      ],
+      "explanation": "האפיגלוטיס הוא סחוס בצורת מכסה שסוגר את הקנה בזמן בליעה כדי למנוע אספירציה."
+    },
+    {
+      "category": "פיזיולוגיה",
+      "level": "basic",
+      "question": "מהו Cardiac Output?",
+      "answers": [
+        {"text": "כמות הדם שהלב מוציא בדקה", "correct": true},
+        {"text": "כמות הדם שהלב מכיל בכל רגע", "correct": false},
+        {"text": "לחץ הדם בעורקים", "correct": false},
+        {"text": "קצב פעימות הלב בדקה", "correct": false}
+      ],
+      "explanation": "Cardiac Output הוא כמות הדם שהלב שואב בדקה אחת, ומחושב כמכפלה של קצב הלב ב-Stroke Volume."
+    },
+    {
+      "category": "פיזיולוגיה",
+      "level": "basic",
+      "question": "מהו Stroke Volume?",
+      "answers": [
+        {"text": "כמות הדם שהחדרים מוציאים בפעימה אחת", "correct": true},
+        {"text": "כמות הדם הכוללת בגוף", "correct": false},
+        {"text": "קצב הלב בדקה", "correct": false},
+        {"text": "לחץ הדם הסיסטולי", "correct": false}
+      ],
+      "explanation": "Stroke Volume הוא כמות הדם שהחדרים מצליחים להוציא החוצה בסחיטה אחת, כלומר בפעימה אחת."
+    },
+    {
+      "category": "פיזיולוגיה",
+      "level": "intermediate",
+      "question": "מהו Preload?",
+      "answers": [
+        {"text": "הלחץ על דפנות החדר בסוף הדיאסטולה", "correct": true},
+        {"text": "הלחץ בעורקים בזמן הסיסטולה", "correct": false},
+        {"text": "כוח התכווצות שריר הלב", "correct": false},
+        {"text": "התנגודת בכלי הדם", "correct": false}
+      ],
+      "explanation": "Preload הוא הלחץ שנוצר על דפנות החדר בסוף הדיאסטולה, ולפי חוק סטרלינג הוא הגורם המכריע ב-Stroke Volume."
+    },
+    {
+      "category": "פיזיולוגיה",
+      "level": "intermediate",
+      "question": "מהו Afterload?",
+      "answers": [
+        {"text": "הלחץ שעל החדר להפעיל כדי לפתוח את המסתמים האורטלי/פולמונרי", "correct": true},
+        {"text": "הלחץ בעליות בזמן הדיאסטולה", "correct": false},
+        {"text": "כמות הדם הנותרת בחדר לאחר הסיסטולה", "correct": false},
+        {"text": "קצב פעימות הלב", "correct": false}
+      ],
+      "explanation": "Afterload הוא הלחץ שעל החדר להפעיל כדי לפתוח את המסתמים האורטלי/פולמונרי, והוא למעשה לחץ הדם."
+    },
+    {
+      "category": "פיזיולוגיה",
+      "level": "advanced",
+      "question": "כיצד הנשמה בלחץ חיובי משפיעה על הפיזיולוגיה הקרדיווסקולרית?",
+      "answers": [
+        {"text": "מקטינה Preload ו-Afterload", "correct": true},
+        {"text": "מגדילה Preload ו-Afterload", "correct": false},
+        {"text": "מגדילה Preload ומקטינה Afterload", "correct": false},
+        {"text": "לא משפיעה על הפרמטרים המודינמיים", "correct": false}
+      ],
+      "explanation": "הנשמה בלחץ חיובי מקטינה את ה-Preload (מקטינה החזר ורידי) ואת ה-Afterload (לחץ על החדרים בסיסטולה)."
+    },
+    {
+      "category": "פיזיולוגיה",
+      "level": "basic",
+      "question": "מהו תפקיד המערכת הסימפתטית על הלב?",
+      "answers": [
+        {"text": "מגבירה את קצב הלב וכוח ההתכווצות", "correct": true},
+        {"text": "מאטה את קצב הלב", "correct": false},
+        {"text": "מפחיתה את כוח ההתכווצות", "correct": false},
+        {"text": "לא משפיעה על הלב", "correct": false}
+      ],
+      "explanation": "המערכת הסימפתטית מגבירה את קצב הלב (chronotropic) ואת כוח ההתכווצות (inotropic)."
+    },
+    {
+      "category": "פיזיולוגיה",
+      "level": "intermediate",
+      "question": "מהו ה-Cardiac Cycle?",
+      "answers": [
+        {"text": "פעימה אחת הכוללת דיאסטולה וסיסטולה", "correct": true},
+        {"text": "זמן מילוי החדרים", "correct": false},
+        {"text": "זמן התכווצות החדרים", "correct": false},
+        {"text": "זמן חזרת הדם לעליות", "correct": false}
+      ],
+      "explanation": "Cardiac Cycle הוא פעימה אחת שבה נראים דיאסטולה (מילוי) וסיסטולה (התכווצות) של החדרים."
+    },
+    {
+      "category": "פיזיולוגיה",
+      "level": "advanced",
+      "question": "איך מחושב לחץ הדם?",
+      "answers": [
+        {"text": "Cardiac Output × Systemic Vascular Resistance", "correct": true},
+        {"text": "Heart Rate × Stroke Volume", "correct": false},
+        {"text": "Preload × Afterload", "correct": false},
+        {"text": "Systolic pressure - Diastolic pressure", "correct": false}
+      ],
+      "explanation": "לחץ הדם מחושב כמכפלה של Cardiac Output בהתנגודת כלי הדם המערכתית (Systemic Vascular Resistance)."
+    },
+    {
+      "category": "פיזיולוגיה",
+      "level": "basic",
+      "question": "איזה אלקטרוליט הוא העיקרי במרווח הבין-תאי?",
+      "answers": [
+        {"text": "נתרן (Sodium)", "correct": true},
+        {"text": "אשלגן (Potassium)", "correct": false},
+        {"text": "סידן (Calcium)", "correct": false},
+        {"text": "מגנזיום (Magnesium)", "correct": false}
+      ],
+      "explanation": "נתרן (Na+) הוא יון חיובי עיקרי במרווח הבין-תאי ואחראי על איזון נוזלים ופעילות חשמלית."
+    },
+    {
+      "category": "מערכת נשימתית",
+      "level": "basic",
+      "question": "מהו תפקיד מערכת הנשימה?",
+      "answers": [
+        {"text": "אחראית על תהליך הנשימה וחילוף גזים", "correct": true},
+        {"text": "שאיבת דם לכל הגוף", "correct": false},
+        {"text": "סינון פסולת מהדם", "correct": false},
+        {"text": "ייצור תאי דם אדומים", "correct": false}
+      ],
+      "explanation": "מערכת הנשימה (Respiratory System) אחראית על תהליך הנשימה, חילוף גזים, ואיזון חומצה-בסיס."
+    },
+    {
+      "category": "מערכת נשימתית",
+      "level": "basic",
+      "question": "איפה מתרחש חילוף הגזים בריאות?",
+      "answers": [
+        {"text": "בנאדיות (Alveoli)", "correct": true},
+        {"text": "בסימפונות", "correct": false},
+        {"text": "בקנה (Trachea)", "correct": false},
+        {"text": "בגרון (Larynx)", "correct": false}
+      ],
+      "explanation": "חילוף הגזים מתרחש בנאדיות הריאה (Alveoli) שם מתבצע מעבר של חמצן ל-CO2."
+    },
+    {
+      "category": "מערכת נשימתית",
+      "level": "intermediate",
+      "question": "מהי Respiratory Acidosis?",
+      "answers": [
+        {"text": "חמצת נשימתית עקב ייצור מוגבר של CO2", "correct": true},
+        {"text": "בססת נשימתית עקב הורדת CO2", "correct": false},
+        {"text": "חמצת מטבולית עקב צבירת חומצות", "correct": false},
+        {"text": "בססת מטבולית עקב איבוד חומצות", "correct": false}
+      ],
+      "explanation": "Respiratory Acidosis היא חמצת נשימתית שנגרמת מייצור מוגבר של CO2 או אי יכולת להפטר ממנו."
+    },
+    {
+      "category": "מערכת נשימתית",
+      "level": "intermediate",
+      "question": "מהי Respiratory Alkalosis?",
+      "answers": [
+        {"text": "בססת נשימתית עקב הורדת רמת CO2 (היפרוונטילציה)", "correct": true},
+        {"text": "חמצת נשימתית עקב עלייה ב-CO2", "correct": false},
+        {"text": "בססת מטבולית עקב נטילת בסיסים", "correct": false},
+        {"text": "חמצת מטבולית עקב כשל כלייתי", "correct": false}
+      ],
+      "explanation": "Respiratory Alkalosis נגרמת כאשר החולה מוריד את רמת ה-CO2 עקב היפרוונטילציה (נשימה מוגברת)."
+    },
+    {
+      "category": "מערכת נשימתית",
+      "level": "advanced",
+      "question": "מהי הבעיה העיקרית ב-ARDS (Acute Respiratory Distress Syndrome)?",
+      "answers": [
+        {"text": "בצקת ריאות שלא על רקע לבבי", "correct": true},
+        {"text": "בצקת ריאות על רקע אי ספיקת לב", "correct": false},
+        {"text": "הצטברות נוזל בחלל הפלאורלי", "correct": false},
+        {"text": "דלקת חיידקית בריאות", "correct": false}
+      ],
+      "explanation": "ARDS היא בצקת ריאות שלא על רקע קרדיאלי (non-cardiogenic), ללא מנגנון קומפנסציה של הלב."
+    },
+    {
+      "category": "מערכת נשימתית",
+      "level": "intermediate",
+      "question": "מהי ההגדרה של Acute Respiratory Failure?",
+      "answers": [
+        {"text": "אי ספיקה נשימתית חריפה שמהווה מצב חירום נפוץ", "correct": true},
+        {"text": "תחושת קוצר נשימה קל", "correct": false},
+        {"text": "ירידה קלה ברמת החמצן בדם", "correct": false},
+        {"text": "עייפות שרירי הנשימה", "correct": false}
+      ],
+      "explanation": "Acute Respiratory Failure היא אי ספיקה נשימתית חריפה המהווה אחד ממצבי החירום הנפוצים ביותר."
+    },
+    {
+      "category": "מערכת נשימתית",
+      "level": "advanced",
+      "question": "מהו V/Q mismatch?",
+      "answers": [
+        {"text": "חוסר התאמה בין החמצון והאיוורור לבין הפרפוזיה (אספקת הדם) לריאות", "correct": true},
+        {"text": "חוסר איזון בין החדר הימני לשמאלי", "correct": false},
+        {"text": "הפרש בין הלחץ האורטלי לפולמונרי", "correct": false},
+        {"text": "הבדל בין קיבולת הריאות לנפח הנשימה", "correct": false}
+      ],
+      "explanation": "V/Q mismatch משמעו חוסר התאמה בין ventilation (אוורור) ל-perfusion (זילוח דם) בריאות."
+    },
+    {
+      "category": "מערכת נשימתית",
+      "level": "intermediate",
+      "question": "מהו Hyperventilation Syndrome (HVS)?",
+      "answers": [
+        {"text": "נשימה מוגברת שגורמת לבססת נשימתית", "correct": true},
+        {"text": "חמצת נשימתית עקב נשימה איטית", "correct": false},
+        {"text": "דלקת בסימפונות", "correct": false},
+        {"text": "חסימה בדרכי הנשימה", "correct": false}
+      ],
+      "explanation": "HVS הוא תסמונת היפרוונטילציה שבה החולה נושם מהר מדי ומוריד CO2, גורם לבססת נשימתית."
+    },
+    {
+      "category": "מערכת נשימתית",
+      "level": "basic",
+      "question": "איזה מרכז נשימה יושב ב-Pons?",
+      "answers": [
+        {"text": "Pontine Respiratory Group", "correct": true},
+        {"text": "Ventral Respiratory Group", "correct": false},
+        {"text": "Dorsal Respiratory Group", "correct": false},
+        {"text": "Medullary Respiratory Center", "correct": false}
+      ],
+      "explanation": "מרכז נשימה נוסף יושב ב-Pons ונקרא Pontine Respiratory Group, פועל כשיש צורך בהעמקת הנשימה."
+    },
+    {
+      "category": "מערכת נשימתית",
+      "level": "intermediate",
+      "question": "מהו Respiratory Zone?",
+      "answers": [
+        {"text": "החלק הנשימתי שמשתתף בחילוף גזים - נאדיות הריאה", "correct": true},
+        {"text": "דרכי האוויר העליונות", "correct": false},
+        {"text": "הסימפונות הגדולות", "correct": false},
+        {"text": "הקנה והגרון", "correct": false}
+      ],
+      "explanation": "Respiratory Zone הוא החלק הנשימתי שמשתתף בחילוף גזים, כולל את נאדיות הריאה."
+    },
+    {
+      "category": "מערכת נשימתית",
+      "level": "advanced",
+      "question": "מה קורה לרמת CO2 באמפיזמה (סוג של COPD)?",
+      "answers": [
+        {"text": "יש ירידה גם ב-V וגם ב-Q, אך V/Q נשמר", "correct": true},
+        {"text": "עלייה חדה ב-CO2 בלבד", "correct": false},
+        {"text": "ירידה ב-V בלבד", "correct": false},
+        {"text": "עלייה ב-Q בלבד", "correct": false}
+      ],
+      "explanation": "באמפיזמה יש ירידה ב-V (אוורור) בגלל ירידה בפרפוזיה וגם ירידה ב-Q (זילוח) בגלל הרס כלי דם, אך V/Q נשמר."
+    },
+    {
+      "category": "מערכת נשימתית",
+      "level": "basic",
+      "question": "מהו Pneumothorax?",
+      "answers": [
+        {"text": "חזה אוויר - אוויר בחלל הפלאורלי", "correct": true},
+        {"text": "דם בחלל הפלאורלי", "correct": false},
+        {"text": "נוזל בחלל הפלאורלי", "correct": false},
+        {"text": "דלקת בריאות", "correct": false}
+      ],
+      "explanation": "Pneumothorax הוא חזה אוויר - מצב בו נכנס אוויר לחלל הפלאורלי בין דפנות בית החזה לריאה."
+    },
+    {
+      "category": "מערכת קרדיווסקולרית",
+      "level": "basic",
+      "question": "מהו תפקיד המערכת הקרדיווסקולרית?",
+      "answers": [
+        {"text": "אחראית על תפקוד הלב וכלי הדם", "correct": true},
+        {"text": "סינון פסולת מהגוף", "correct": false},
+        {"text": "ייצור הורמונים", "correct": false},
+        {"text": "עיכול מזון", "correct": false}
+      ],
+      "explanation": "המערכת הקרדיווסקולרית (Cardiovascular System) אחראית על תפקוד הלב וכלי הדם, שאיבת דם וזילוח רקמות."
+    },
+    {
+      "category": "מערכת קרדיווסקולרית",
+      "level": "intermediate",
+      "question": "מהו Heart Failure?",
+      "answers": [
+        {"text": "אי ספיקת לב - הלב אינו מסוגל לשאוב מספיק דם", "correct": true},
+        {"text": "הפרעת קצב חולפת", "correct": false},
+        {"text": "דלקת בשריר הלב", "correct": false},
+        {"text": "חסימה בעורקים הכליליים", "correct": false}
+      ],
+      "explanation": "Heart Failure היא אי ספיקת לב, מצב בו הלב אינו מסוגל לשאוב מספיק דם לצרכי הגוף."
+    },
+    {
+      "category": "מערכת קרדיווסקולרית",
+      "level": "advanced",
+      "question": "מהו Cardiac Asthma?",
+      "answers": [
+        {"text": "בצקת ריאות שבמקום חרחורים שומעים צפצופים", "correct": true},
+        {"text": "אסטמה רגילה המחמירה בגלל בעיית לב", "correct": false},
+        {"text": "ברונכוספזם עקב תרופות לב", "correct": false},
+        {"text": "קוצר נשימה על רקע אלרגי", "correct": false}
+      ],
+      "explanation": "Cardiac Asthma היא בצקת ריאות שבה במקום חרחורים שומעים צפצופים אינספירטוריים ואקספירטוריים."
+    },
+    {
+      "category": "מערכת קרדיווסקולרית",
+      "level": "intermediate",
+      "question": "מהו Cardiogenic Shock?",
+      "answers": [
+        {"text": "בצקת ריאות ולחץ דם נמוך - כל מנגנוני הפיצוי קרסו", "correct": true},
+        {"text": "הלם על רקע דימום", "correct": false},
+        {"text": "הלם על רקע זיהומי", "correct": false},
+        {"text": "הלם על רקע אלרגי", "correct": false}
+      ],
+      "explanation": "Cardiogenic Shock הוא מצב בו הלחץ דם כבר כל כך נמוך שכל מנגנוני הפיצוי קרסו, יש בצקת ריאות ולחץ נמוך."
+    },
+    {
+      "category": "מערכת קרדיווסקולרית",
+      "level": "basic",
+      "question": "מהו IHD (Ischemic Heart Disease)?",
+      "answers": [
+        {"text": "מחלת לב איסכמית - חסימה בעורקים הכליליים", "correct": true},
+        {"text": "דלקת שריר הלב", "correct": false},
+        {"text": "הפרעת קצב", "correct": false},
+        {"text": "מום במסתמי הלב", "correct": false}
+      ],
+      "explanation": "IHD (Ischemic Heart Disease) היא מחלת לב איסכמית הנגרמת מחסימה בעורקים הכליליים."
+    },
+    {
+      "category": "מערכת קרדיווסקולרית",
+      "level": "advanced",
+      "question": "מה קורה לברדיקרדיה מתחת ל-50 פעימות לדקה?",
+      "answers": [
+        {"text": "זה מוריד את ה-Cardiac Output בצורה מסוכנת", "correct": true},
+        {"text": "זה מגביר את ה-Cardiac Output", "correct": false},
+        {"text": "אין השפעה על ה-Cardiac Output", "correct": false},
+        {"text": "זה משפיע רק על ה-Stroke Volume", "correct": false}
+      ],
+      "explanation": "ברדיקרדיה מתחת ל-50 מוריד את ה-Cardiac Output בצורה מסוכנת ולכן מופיעים סימנים קליניים של ירידות לחץ."
+    },
+    {
+      "category": "מערכת קרדיווסקולרית",
+      "level": "intermediate",
+      "question": "מהו Cardiac Contusion?",
+      "answers": [
+        {"text": "חבלת לב - פגיעה טראומטית בשריר הלב", "correct": true},
+        {"text": "דלקת שריר הלב", "correct": false},
+        {"text": "אוטם שריר הלב", "correct": false},
+        {"text": "קרע בשריר הלב", "correct": false}
+      ],
+      "explanation": "Cardiac Contusion היא חבלת לב - פגיעה טראומטית בשריר הלב, בדרך כלל עקב טראומה קהה לחזה."
+    },
+    {
+      "category": "מערכת קרדיווסקולרית",
+      "level": "advanced",
+      "question": "מהו Cardiac Tamponade?",
+      "answers": [
+        {"text": "הצטברות נוזל/דם בכיס הפריקרד הלוחץ על הלב", "correct": true},
+        {"text": "חסימה בעורקים הכליליים", "correct": false},
+        {"text": "קרע במסתם הלב", "correct": false},
+        {"text": "דלקת בכיס הפריקרד", "correct": false}
+      ],
+      "explanation": "Cardiac Tamponade הוא הצטברות נוזל או דם בכיס הפריקרד שלוחץ על הלב ומפריע לתפקודו."
+    },
+    {
+      "category": "מערכת קרדיווסקולרית",
+      "level": "intermediate",
+      "question": "מהו Heart Murmur?",
+      "answers": [
+        {"text": "אוושה - קול לא תקין הנשמע בהאזנה ללב", "correct": true},
+        {"text": "הפרעת קצב", "correct": false},
+        {"text": "כאב בחזה", "correct": false},
+        {"text": "קוצר נשימה", "correct": false}
+      ],
+      "explanation": "Heart Murmur (אוושה) הוא קול לא תקין הנשמע בהאזנה ללב, לרוב עקב זרימת דם סוערת דרך המסתמים."
+    },
+    {
+      "category": "מערכת קרדיווסקולרית",
+      "level": "basic",
+      "question": "מהו Normal Heart Axis?",
+      "answers": [
+        {"text": "ציר הלב התקין ב-ECG", "correct": true},
+        {"text": "קצב הלב התקין", "correct": false},
+        {"text": "כיוון זרימת הדם בלב", "correct": false},
+        {"text": "מיקום הלב בחזה", "correct": false}
+      ],
+      "explanation": "Normal Heart Axis הוא ציר הלב התקין המופיע ב-ECG, המייצג את הכיוון הכללי של הפעילות החשמלית."
+    },
+    {
+      "category": "מערכת קרדיווסקולרית",
+      "level": "intermediate",
+      "question": "מהו Valvular Heart Disease?",
+      "answers": [
+        {"text": "מחלת מסתמי הלב - פגיעה במסתמים", "correct": true},
+        {"text": "חסימה בעורקים הכליליים", "correct": false},
+        {"text": "דלקת בשריר הלב", "correct": false},
+        {"text": "הפרעת קצב", "correct": false}
+      ],
+      "explanation": "Valvular Heart Disease היא מחלת מסתמי הלב, הכוללת היצרות (stenosis) או אי ספיקה (regurgitation) של המסתמים."
+    },
+    {
+      "category": "מערכת קרדיווסקולרית",
+      "level": "advanced",
+      "question": "מהו CRT (Cardiac Resynchronization Therapy)?",
+      "answers": [
+        {"text": "טיפול בסנכרון מחדש של הלב באמצעות קוצב", "correct": true},
+        {"text": "החייאה לבבית-ריאתית", "correct": false},
+        {"text": "דפיברילציה חשמלית", "correct": false},
+        {"text": "צנתור לב", "correct": false}
+      ],
+      "explanation": "CRT היא טיפול בסנכרון מחדש של הלב באמצעות קוצב מיוחד לחולים עם אי ספיקת לב."
+    },
+    {
+      "category": "מערכת קרדיווסקולרית",
+      "level": "intermediate",
+      "question": "מהי Conjunctive Heart Failure?",
+      "answers": [
+        {"text": "אי ספיקת לב גודשת - CHF", "correct": true},
+        {"text": "דלקת בשריר הלב", "correct": false},
+        {"text": "הפרעת קצב", "correct": false},
+        {"text": "חסימה בעורקים", "correct": false}
+      ],
+      "explanation": "Conjunctive Heart Failure (CHF) היא אי ספיקת לב גודשת, מצב בו הלב לא מצליח לשאוב דם ביעילות."
+    },
+    {
+      "category": "מערכת קרדיווסקולרית",
+      "level": "advanced",
+      "question": "מה ההבדל בין Compensated Shock ל-Uncompensated Shock?",
+      "answers": [
+        {"text": "ב-Compensated יש מנגנוני פיצוי פעילים, ב-Uncompensated הם קרסו", "correct": true},
+        {"text": "ב-Compensated יש לחץ דם נמוך, ב-Uncompensated לחץ תקין", "correct": false},
+        {"text": "ב-Compensated יש אובדן הכרה, ב-Uncompensated לא", "correct": false},
+        {"text": "אין הבדל, זה אותו מצב", "correct": false}
+      ],
+      "explanation": "Compensated Shock (Pre-Shock) הוא הלם מפוצה עם מנגנוני פיצוי פעילים, ואילו Uncompensated Shock הוא כשהמנגנונים קרסו."
+    },
+    {
+      "category": "מערכת קרדיווסקולרית",
+      "level": "basic",
+      "question": "מהו Hypovolemic Shock?",
+      "answers": [
+        {"text": "הלם על רקע אובדן נפח דם", "correct": true},
+        {"text": "הלם על רקע אי ספיקת לב", "correct": false},
+        {"text": "הלם על רקע זיהום", "correct": false},
+        {"text": "הלם על רקע אלרגי", "correct": false}
+      ],
+      "explanation": "Hypovolemic Shock הוא הלם היפו-וולמי, הנגרם מאובדן משמעותי של נפח הדם או נוזלים."
+    },
+    {
+      "category": "נתיב אוויר",
+      "level": "basic",
+      "question": "מהו תפקיד נתיב האוויר?",
+      "answers": [
+        {"text": "העברת אוויר לריאות, הגנה, ואיזון חומצה-בסיס", "correct": true},
+        {"text": "שאיבת דם", "correct": false},
+        {"text": "סינון פסולת", "correct": false},
+        {"text": "ייצור הורמונים", "correct": false}
+      ],
+      "explanation": "נתיב האוויר אחראי על העברת אוויר לריאות, הגנה מפני גופים זרים, ואיזון חומצה-בסיס."
+    },
+    {
+      "category": "נתיב אוויר",
+      "level": "basic",
+      "question": "מהי אינטובציה?",
+      "answers": [
+        {"text": "Endotracheal Intubation - החדרת צינור דרך הקנה לריאות", "correct": true},
+        {"text": "החדרת צינור דרך האף", "correct": false},
+        {"text": "מתן חמצן באמצעות מסכה", "correct": false},
+        {"text": "הנשמה באמבו", "correct": false}
+      ],
+      "explanation": "אינטובציה (Endotracheal Intubation) היא החדרת צינור דרך הגרון והקנה לריאות כדי לאבטח נתיב אוויר."
+    },
+    {
+      "category": "נתיב אוויר",
+      "level": "intermediate",
+      "question": "כמה ניסיונות אינטובציה מותרים לפי הפרוטוקול?",
+      "answers": [
+        {"text": "עד 3 ניסיונות, לפחות אחד מהם עם Bougie", "correct": true},
+        {"text": "ניסיון אחד בלבד", "correct": false},
+        {"text": "ניסיונות בלתי מוגבלים", "correct": false},
+        {"text": "עד 5 ניסיונות", "correct": false}
+      ],
+      "explanation": "הפרוטוקול מגביל לעד 3 ניסיונות אינטובציה כאשר לפחות אחד מהם חייב להיות תוך שימוש ב-Bougie."
+    },
+    {
+      "category": "נתיב אוויר",
+      "level": "intermediate",
+      "question": "מהו LMA (Laryngeal Mask Airway)?",
+      "answers": [
+        {"text": "מכשיר למאבטח נתיב אוויר שמוכנס ללא לרינגוסקופ", "correct": true},
+        {"text": "צינור אינטובציה רגיל", "correct": false},
+        {"text": "מסכת חמצן", "correct": false},
+        {"text": "מכשיר סקשן", "correct": false}
+      ],
+      "explanation": "LMA הוא מכשיר למאבטח נתיב אוויר שמוכנס דרך החך העליון ללא צורך בלרינגוסקופ."
+    },
+    {
+      "category": "נתיב אוויר",
+      "level": "advanced",
+      "question": "מהי קוניוטומיה?",
+      "answers": [
+        {"text": "פתיחת נתיב אוויר חירום דרך הממברנה הקריקו-תירואידית", "correct": true},
+        {"text": "אינטובציה רגילה", "correct": false},
+        {"text": "החדרת צינור דרך האף", "correct": false},
+        {"text": "הנשמה באמבו", "correct": false}
+      ],
+      "explanation": "קוניוטומיה היא פתיחת נתיב אוויר חירום כירורגי דרך הממברנה הקריקו-תירואידית כאשר אינטובציה נכשלת."
+    },
+    {
+      "category": "נתיב אוויר",
+      "level": "intermediate",
+      "question": "מהו Jet Ventilation?",
+      "answers": [
+        {"text": "שיטת הנשמה חלופית בלחץ גבוה", "correct": true},
+        {"text": "הנשמה רגילה באמבו", "correct": false},
+        {"text": "מתן חמצן במסכה", "correct": false},
+        {"text": "הנשמה מכנית במנשם", "correct": false}
+      ],
+      "explanation": "Jet Ventilation היא שיטת הנשמה חירום בלחץ גבוה המשמשת במצבי Difficult Airway."
+    },
+    {
+      "category": "נתיב אוויר",
+      "level": "advanced",
+      "question": "מהי One Lung Intubation?",
+      "answers": [
+        {"text": "הטובוס חדר מעבר לנקודת הקרינה וב-90% חודר לריאה ימין", "correct": true},
+        {"text": "אינטובציה מכוונת לריאה אחת", "correct": false},
+        {"text": "אינטובציה של חולה עם ריאה אחת", "correct": false},
+        {"text": "שיטת אינטובציה מיוחדת", "correct": false}
+      ],
+      "explanation": "One Lung Intubation היא סיבוך של אינטובציה עמוקה מדי, שבה הטובוס חדר מעבר לנקודת הקרינה וב-90% חודר לריאה הימנית."
+    },
+    {
+      "category": "נתיב אוויר",
+      "level": "intermediate",
+      "question": "מהו CPAP (Continuous Positive Airway Pressure)?",
+      "answers": [
+        {"text": "תמיכה נשימתית לא פולשנית בלחץ חיובי רציף", "correct": true},
+        {"text": "אינטובציה", "correct": false},
+        {"text": "הנשמה מכנית פולשנית", "correct": false},
+        {"text": "מתן חמצן במסכה רגילה", "correct": false}
+      ],
+      "explanation": "CPAP היא שיטה לאספקת תמיכה נשימתית לא פולשנית בלחץ חיובי רציף."
+    },
+    {
+      "category": "נתיב אוויר",
+      "level": "basic",
+      "question": "מהי Difficult Airway?",
+      "answers": [
+        {"text": "נתיב אוויר קשה להנהלה ולאינטובציה", "correct": true},
+        {"text": "חולה שסירב לטיפול", "correct": false},
+        {"text": "נתיב אוויר תקין", "correct": false},
+        {"text": "חולה עם אלרגיה", "correct": false}
+      ],
+      "explanation": "Difficult Airway הוא מצב בו ההנהלה והאבטחה של נתיב האוויר מהווים אתגר טכני משמעותי."
+    },
+    {
+      "category": "נתיב אוויר",
+      "level": "advanced",
+      "question": "מהי אנטומיה בעייתית לאינטובציה?",
+      "answers": [
+        {"text": "מבנה אנטומי המקשה על ביצוע אינטובציה", "correct": true},
+        {"text": "גוף זר בדרכי הנשימה", "correct": false},
+        {"text": "זיהום בגרון", "correct": false},
+        {"text": "שבר בצוואר", "correct": false}
+      ],
+      "explanation": "אנטומיה בעייתית כוללת מבנים כמו צוואר קצר, לסת קטנה, או הגבלת פתיחת הפה המקשים על אינטובציה."
+    },
+    {
+      "category": "פרמקולוגיה",
+      "level": "basic",
+      "question": "מהו Epinephrine (אדרנלין)?",
+      "answers": [
+        {"text": "הורמון של המערכת הסימפתטית המופרש מ-Adrenal Medulla", "correct": true},
+        {"text": "אנטיביוטיקה", "correct": false},
+        {"text": "משכך כאבים", "correct": false},
+        {"text": "תרופה להורדת לחץ דם", "correct": false}
+      ],
+      "explanation": "Epinephrine הוא הורמון של המערכת הסימפתטית המופרש מה-Adrenal Medulla, משמש בהחייאה ובאנאפילקסיס."
+    },
+    {
+      "category": "פרמקולוגיה",
+      "level": "intermediate",
+      "question": "מהו Midazolam (דורמיקום)?",
+      "answers": [
+        {"text": "בנזודיאזפין להרדמה והרגעה", "correct": true},
+        {"text": "אנטיביוטיקה", "correct": false},
+        {"text": "משכך כאבים אופיאטי", "correct": false},
+        {"text": "תרופה ללחץ דם", "correct": false}
+      ],
+      "explanation": "Midazolam (דורמיקום) הוא בנזודיאזפין המשמש להרדמה, הרגעה ובקרת פרכוסים."
+    },
+    {
+      "category": "פרמקולוגיה",
+      "level": "basic",
+      "question": "מהו Aspirin?",
+      "answers": [
+        {"text": "תרופה נוגדת טסיות המשמשת ב-ACS", "correct": true},
+        {"text": "אנטיביוטיקה", "correct": false},
+        {"text": "תרופה להרדמה", "correct": false},
+        {"text": "תרופה נוגדת כאב בלבד", "correct": false}
+      ],
+      "explanation": "Aspirin הוא תרופה נוגדת טסיות (antiplatelet) המשמשת בטיפול ב-ACS למניעת הרחבת הקריש."
+    },
+    {
+      "category": "פרמקולוגיה",
+      "level": "intermediate",
+      "question": "מהו Amiodarone?",
+      "answers": [
+        {"text": "תרופה אנטי-אריתמית לטיפול בהפרעות קצב", "correct": true},
+        {"text": "משכך כאבים", "correct": false},
+        {"text": "אנטיביוטיקה", "correct": false},
+        {"text": "תרופה להרדמה", "correct": false}
+      ],
+      "explanation": "Amiodarone היא תרופה אנטי-אריתמית המשמשת בטיפול בהפרעות קצב חדריות ועלייתיות."
+    },
+    {
+      "category": "פרמקולוגיה",
+      "level": "intermediate",
+      "question": "מהו Atropine?",
+      "answers": [
+        {"text": "תרופה אנטי-כולינרגית להגברת קצב הלב", "correct": true},
+        {"text": "תרופה להורדת קצב הלב", "correct": false},
+        {"text": "אנטיביוטיקה", "correct": false},
+        {"text": "משכך כאבים", "correct": false}
+      ],
+      "explanation": "Atropine הוא תרופה אנטי-כולינרגית החוסמת את המערכת הפרא-סימפתטית ומגבירה את קצב הלב."
+    },
+    {
+      "category": "פרמקולוגיה",
+      "level": "advanced",
+      "question": "מהו Ketamine ומהם היתרונות שלו?",
+      "answers": [
+        {"text": "תרופה להרדמה עם השפעה אנלגטית ומרחיבה סימפונות", "correct": true},
+        {"text": "תרופה להורדת לחץ דם בלבד", "correct": false},
+        {"text": "אנטיביוטיקה רחבת טווח", "correct": false},
+        {"text": "תרופה נוגדת קרישה", "correct": false}
+      ],
+      "explanation": "Ketamine משמש להרדמה, יש לו השפעה אנלגטית טובה עם אופיאטים, ומרחיב סימפונות לכן מצוין ב-COPD/אסטמה."
+    },
+    {
+      "category": "פרמקולוגיה",
+      "level": "basic",
+      "question": "מהו Glucose?",
+      "answers": [
+        {"text": "סוכר פשוט לטיפול בהיפוגליקמיה", "correct": true},
+        {"text": "תרופה להורדת סוכר", "correct": false},
+        {"text": "אנטיביוטיקה", "correct": false},
+        {"text": "משכך כאבים", "correct": false}
+      ],
+      "explanation": "Glucose הוא סוכר פשוט המשמש לטיפול בהיפוגליקמיה (סוכר נמוך), ניתן IV במינון 25g."
+    },
+    {
+      "category": "פרמקולוגיה",
+      "level": "intermediate",
+      "question": "מהם Beta Blockers?",
+      "answers": [
+        {"text": "חוסמי בטא - תרופות המאטות קצב הלב ומורידות לחץ דם", "correct": true},
+        {"text": "תרופות המגבירות קצב הלב", "correct": false},
+        {"text": "אנטיביוטיקות", "correct": false},
+        {"text": "משככי כאבים", "correct": false}
+      ],
+      "explanation": "Beta Blockers הם אנטגוניסטים למערכת הסימפתטית, חוסמים קולטני בטא ומאטים קצב הלב ומורידים לחץ דם."
+    },
+    {
+      "category": "פרמקולוגיה",
+      "level": "intermediate",
+      "question": "מהו Sodium Bicarbonate?",
+      "answers": [
+        {"text": "תרופה לטיפול בחמצת מטבולית", "correct": true},
+        {"text": "תרופה לטיפול בבססת", "correct": false},
+        {"text": "אנטיביוטיקה", "correct": false},
+        {"text": "משכך כאבים", "correct": false}
+      ],
+      "explanation": "Sodium Bicarbonate (נתרן ביקרבונט) משמש לטיפול בחמצת מטבולית ע״י העלאת ה-pH."
+    },
+    {
+      "category": "פרמקולוגיה",
+      "level": "advanced",
+      "question": "מהן קונטרה-אינדיקציות למתן Ketamine?",
+      "answers": [
+        {"text": "לחץ דם פחות מ-90-100 סיסטולי (קונטרה יחסית)", "correct": true},
+        {"text": "כל חולה מעל גיל 65", "correct": false},
+        {"text": "חולה עם סוכרת", "correct": false},
+        {"text": "חולה עם אסטמה", "correct": false}
+      ],
+      "explanation": "לפי הפרוטוקול והמודולה, Ketamine לא ניתן כאשר לחץ הדם פחות מ-90-100 סיסטולי, אלא אם אין ברירה."
+    },
+    {
+      "category": "פרמקולוגיה",
+      "level": "basic",
+      "question": "מהו Oxygen?",
+      "answers": [
+        {"text": "גז חיוני לטיפול בהיפוקסיה", "correct": true},
+        {"text": "תרופה להרדמה", "correct": false},
+        {"text": "אנטיביוטיקה", "correct": false},
+        {"text": "משכך כאבים", "correct": false}
+      ],
+      "explanation": "חמצן (Oxygen) הוא גז חיוני לחיים המשמש לטיפול בהיפוקסיה והעלאת רמת החמצן בדם."
+    },
+    {
+      "category": "פרמקולוגיה",
+      "level": "intermediate",
+      "question": "מהו Enoxaparin Sodium?",
+      "answers": [
+        {"text": "הפרין במשקל מולקולרי נמוך - תרופה נוגדת קרישה", "correct": true},
+        {"text": "תרופה מקריזה דם", "correct": false},
+        {"text": "אנטיביוטיקה", "correct": false},
+        {"text": "משכך כאבים", "correct": false}
+      ],
+      "explanation": "Enoxaparin Sodium הוא הפרין במשקל מולקולרי נמוך (LMWH) המשמש למניעת קרישה ב-ACS."
+    },
+    {
+      "category": "קרדיולוגיה",
+      "level": "basic",
+      "question": "מהו ECG?",
+      "answers": [
+        {"text": "אלקטרוקרדיוגרם - בדיקה הקוראת את הפעילות החשמלית של הלב", "correct": true},
+        {"text": "בדיקת דם", "correct": false},
+        {"text": "צילום רנטגן של הלב", "correct": false},
+        {"text": "בדיקת קולות לב", "correct": false}
+      ],
+      "explanation": "ECG (Electrocardiogram) קורא את המעבר החשמלי של הלב ומפענח בצורה גרפית את הפעילות החשמלית."
+    },
+    {
+      "category": "קרדיולוגיה",
+      "level": "basic",
+      "question": "כמה לידים (leads) יש ב-ECG סטנדרטי?",
+      "answers": [
+        {"text": "12 לידים", "correct": true},
+        {"text": "6 לידים", "correct": false},
+        {"text": "8 לידים", "correct": false},
+        {"text": "15 לידים", "correct": false}
+      ],
+      "explanation": "ECG סטנדרטי כולל 12 לידים המסתכלים על הלב מזוויות שונות."
+    },
+    {
+      "category": "קרדיולוגיה",
+      "level": "intermediate",
+      "question": "מהו STEMI?",
+      "answers": [
+        {"text": "ST Elevation Myocardial Infarction - אוטם עם עליות ST", "correct": true},
+        {"text": "אוטם ללא עליות ST", "correct": false},
+        {"text": "הפרעת קצב", "correct": false},
+        {"text": "אנגינה יציבה", "correct": false}
+      ],
+      "explanation": "STEMI הוא אוטם שריר הלב עם עליות של מקטע ה-ST ב-ECG, מצריך טיפול דחוף."
+    },
+    {
+      "category": "קרדיולוגיה",
+      "level": "intermediate",
+      "question": "מהו ACS (Acute Coronary Syndrome)?",
+      "answers": [
+        {"text": "תסמונת כלילית חריפה הכוללת STEMI, NSTEMI ואנגינה לא יציבה", "correct": true},
+        {"text": "רק אוטם שריר הלב", "correct": false},
+        {"text": "רק אנגינה יציבה", "correct": false},
+        {"text": "הפרעת קצב בלבד", "correct": false}
+      ],
+      "explanation": "ACS (Acute Coronary Syndrome) היא תסמונת כלילית חריפה הכוללת STEMI, Non-STEMI ואנגינה לא יציבה."
+    },
+    {
+      "category": "קרדיולוגיה",
+      "level": "basic",
+      "question": "מהי Sinus Tachycardia?",
+      "answers": [
+        {"text": "קצב סינוסי מעל 100 פעימות לדקה", "correct": true},
+        {"text": "קצב סינוסי מתחת ל-60 פעימות לדקה", "correct": false},
+        {"text": "הפרעת קצב לא סינוסית", "correct": false},
+        {"text": "פרפור עליות", "correct": false}
+      ],
+      "explanation": "Sinus Tachycardia היא קצב סינוסי תקין אבל מהיר (מעל 100 פעימות לדקה)."
+    },
+    {
+      "category": "קרדיולוגיה",
+      "level": "basic",
+      "question": "מהי Sinus Bradycardia?",
+      "answers": [
+        {"text": "קצב סינוסי מתחת ל-60 פעימות לדקה", "correct": true},
+        {"text": "קצב סינוסי מעל 100 פעימות לדקה", "correct": false},
+        {"text": "הפרעת קצב חדרית", "correct": false},
+        {"text": "פרפור עליות", "correct": false}
+      ],
+      "explanation": "Sinus Bradycardia היא קצב סינוסי איטי (מתחת ל-60 פעימות לדקה)."
+    },
+    {
+      "category": "קרדיולוגיה",
+      "level": "intermediate",
+      "question": "מהו Atrial Fibrillation?",
+      "answers": [
+        {"text": "פרפור עליות - הפרעת קצב עלייתית לא מסודרת", "correct": true},
+        {"text": "פרפור חדרים", "correct": false},
+        {"text": "קצב סינוסי תקין", "correct": false},
+        {"text": "חסם הולכה", "correct": false}
+      ],
+      "explanation": "Atrial Fibrillation (A fib) הוא פרפור עליות - הפרעת קצב בה העליות מתכווצות בצורה כאוטית."
+    },
+    {
+      "category": "קרדיולוגיה",
+      "level": "intermediate",
+      "question": "מהו VT (Ventricular Tachycardia)?",
+      "answers": [
+        {"text": "טכיקרדיה חדרית - קצב מהיר ממוצא חדרי", "correct": true},
+        {"text": "טכיקרדיה עלייתית", "correct": false},
+        {"text": "קצב סינוסי מהיר", "correct": false},
+        {"text": "ברדיקרדיה חדרית", "correct": false}
+      ],
+      "explanation": "Ventricular Tachycardia (VT) היא טכיקרדיה חדרית - קצב מהיר ממוצא חדרי, עלול להיות מסכן חיים."
+    },
+    {
+      "category": "קרדיולוגיה",
+      "level": "advanced",
+      "question": "מהו VF (Ventricular Fibrillation)?",
+      "answers": [
+        {"text": "פרפור חדרים - הפרעת קצב קטלנית הדורשת דפיברילציה מיידית", "correct": true},
+        {"text": "פרפור עליות", "correct": false},
+        {"text": "טכיקרדיה חדרית", "correct": false},
+        {"text": "אסיסטולה", "correct": false}
+      ],
+      "explanation": "Ventricular Fibrillation (VF) הוא פרפור חדרים - הפרעת קצב קטלנית בה החדרים רועדים ללא התכווצות יעילה."
+    },
+    {
+      "category": "קרדיולוגיה",
+      "level": "advanced",
+      "question": "מהו PSVT (Paroxysmal Supra-Ventricular Tachycardia)?",
+      "answers": [
+        {"text": "טכיקרדיה על-חדרית התקפית - הפרעת קצב Reentrant", "correct": true},
+        {"text": "טכיקרדיה חדרית", "correct": false},
+        {"text": "פרפור עליות", "correct": false},
+        {"text": "ברדיקרדיה סינוסית", "correct": false}
+      ],
+      "explanation": "PSVT היא טכיקרדיה על-חדרית התקפית, הפרעת קצב Reentrant המתחילה ומסתיימת באופן פתאומי."
+    },
+    {
+      "category": "קרדיולוגיה",
+      "level": "basic",
+      "question": "מהו Defibrillation?",
+      "answers": [
+        {"text": "דפיברילציה - מתן שוק חשמלי לטיפול ב-VF/VT", "correct": true},
+        {"text": "הנשמה מלאכותית", "correct": false},
+        {"text": "עיסוי לב", "correct": false},
+        {"text": "מתן תרופות", "correct": false}
+      ],
+      "explanation": "Defibrillation היא דפיברילציה - מתן שוק חשמלי כטיפול בדום לב מסוג VF/VT."
+    },
+    {
+      "category": "קרדיולוגיה",
+      "level": "intermediate",
+      "question": "מהו WCT (Wide Complex Tachycardia)?",
+      "answers": [
+        {"text": "טכיקרדיה עם קומפלקס רחב - חשד לקצב חדרי", "correct": true},
+        {"text": "טכיקרדיה עם קומפלקס צר", "correct": false},
+        {"text": "ברדיקרדיה", "correct": false},
+        {"text": "קצב סינוסי תקין", "correct": false}
+      ],
+      "explanation": "WCT היא טכיקרדיה עם קומפלקס רחב, לרוב מעידה על קצב ממוצא חדרי או הולכה לקויה."
+    },
+    {
+      "category": "קרדיולוגיה",
+      "level": "intermediate",
+      "question": "מהו NCT (Narrow Complex Tachycardia)?",
+      "answers": [
+        {"text": "טכיקרדיה עם קומפלקס צר - לרוב ממוצא על-חדרי", "correct": true},
+        {"text": "טכיקרדיה עם קומפלקס רחב", "correct": false},
+        {"text": "ברדיקרדיה סינוסית", "correct": false},
+        {"text": "פרפור חדרים", "correct": false}
+      ],
+      "explanation": "NCT היא טכיקרדיה עם קומפלקס צר, לרוב ממוצא על-חדרי (עליות או ג'נקשיין)."
+    },
+    {
+      "category": "קרדיולוגיה",
+      "level": "advanced",
+      "question": "מהו LBBB (Left Bundle Branch Block)?",
+      "answers": [
+        {"text": "חסם הולכה בצרור השמאלי - יכול להחקות STEMI", "correct": true},
+        {"text": "חסם הולכה בצרור הימני", "correct": false},
+        {"text": "הפרעת קצב עלייתית", "correct": false},
+        {"text": "אוטם שריר הלב", "correct": false}
+      ],
+      "explanation": "LBBB הוא חסם בצרור השמאלי, כאשר הוא חדש מטופל כמו STEMI בפרוטוקול ACS."
+    },
+    {
+      "category": "קרדיולוגיה",
+      "level": "advanced",
+      "question": "מתי מבצעים ECG ימני-אחורי?",
+      "answers": [
+        {"text": "כשיש חשד לאוטם בקיר הימני או האחורי של הלב", "correct": true},
+        {"text": "בכל מקרה של כאבים בחזה", "correct": false},
+        {"text": "רק בהפרעות קצב", "correct": false},
+        {"text": "לא מבצעים בשטח", "correct": false}
+      ],
+      "explanation": "ECG ימני-אחורי מבוצע כדי לראות את הקירות הימני והאחורי של הלב שלא נראים ב-ECG רגיל."
+    },
+    {
+      "category": "פרוטוקולים",
+      "level": "basic",
+      "question": "מהו פרוטוקול ACS?",
+      "answers": [
+        {"text": "פרוטוקול לטיפול בתסמונת כלילית חריפה", "correct": true},
+        {"text": "פרוטוקול לטיפול באסטמה", "correct": false},
+        {"text": "פרוטוקול לטיפול בדום לב", "correct": false},
+        {"text": "פרוטוקול לטיפול בשבץ", "correct": false}
+      ],
+      "explanation": "פרוטוקול ACS מיועד לטיפול בתסמונת כלילית חריפה (Acute Coronary Syndrome) הכוללת STEMI ו-NSTEMI."
+    },
+    {
+      "category": "פרוטוקולים",
+      "level": "intermediate",
+      "question": "מהו פרוטוקול הפסקת נשימה?",
+      "answers": [
+        {"text": "פרוטוקול המכתיב כיצד ומתי לבצע אינטובציה והרדמה", "correct": true},
+        {"text": "פרוטוקול להפסקת החייאה", "correct": false},
+        {"text": "פרוטוקול לניתוק מנשם", "correct": false},
+        {"text": "פרוטוקול למתן חמצן", "correct": false}
+      ],
+      "explanation": "פרוטוקול הפסקת נשימה מכתיב את הצורה של איך מבצעים הנשמה, מתי, איך מרדימים את המטופל ואיך מתמודדים עם כישלון."
+    },
+    {
+      "category": "פרוטוקולים",
+      "level": "basic",
+      "question": "מהו פרוטוקול דום לב VF/VT?",
+      "answers": [
+        {"text": "פרוטוקול לטיפול בדום לב עם קצבים הניתנים לדפיברילציה", "correct": true},
+        {"text": "פרוטוקול לטיפול באסיסטולה", "correct": false},
+        {"text": "פרוטוקול לטיפול בברדיקרדיה", "correct": false},
+        {"text": "פרוטוקול לטיפול בהלם", "correct": false}
+      ],
+      "explanation": "פרוטוקול זה מתמקד בטיפול בדום לב מסוג VF (פרפור חדרים) או VT (טכיקרדיה חדרית ללא דופק)."
+    },
+    {
+      "category": "פרוטוקולים",
+      "level": "intermediate",
+      "question": "מהו פרוטוקול ROSC?",
+      "answers": [
+        {"text": "Return Of Spontaneous Circulation - פרוטוקול לאחר החזרת דופק", "correct": true},
+        {"text": "פרוטוקול לתחילת החייאה", "correct": false},
+        {"text": "פרוטוקול להפסקת החייאה", "correct": false},
+        {"text": "פרוטוקול לדום לב", "correct": false}
+      ],
+      "explanation": "פרוטוקול ROSC מיועד לטיפול לאחר החזרת דופק ספונטני (Return Of Spontaneous Circulation)."
+    },
+    {
+      "category": "פרוטוקולים",
+      "level": "intermediate",
+      "question": "מהו פרוטוקול ברדיקרדיה?",
+      "answers": [
+        {"text": "פרוטוקול לטיפול בקצב לב איטי מדי", "correct": true},
+        {"text": "פרוטוקול לטיפול בקצב לב מהיר", "correct": false},
+        {"text": "פרוטוקול לטיפול בפרפור עליות", "correct": false},
+        {"text": "פרוטוקול לטיפול בדום לב", "correct": false}
+      ],
+      "explanation": "פרוטוקול ברדיקרדיה מיועד לטיפול בקצב לב איטי עם סימפטומים (לרוב מתחת ל-50 פעימות לדקה)."
+    },
+    {
+      "category": "פרוטוקולים",
+      "level": "basic",
+      "question": "מהו פרוטוקול אנאפילקסיס?",
+      "answers": [
+        {"text": "פרוטוקול לטיפול בתגובה אלרגית חמורה", "correct": true},
+        {"text": "פרוטוקול לטיפול בהלם היפו-וולמי", "correct": false},
+        {"text": "פרוטוקול לטיפול באסטמה", "correct": false},
+        {"text": "פרוטוקול לטיפול בשבץ", "correct": false}
+      ],
+      "explanation": "פרוטוקול אנאפילקסיס מיועד לטיפול בתגובה אלרגית חמורה ומסכנת חיים."
+    },
+    {
+      "category": "פרוטוקולים",
+      "level": "intermediate",
+      "question": "מהו פרוטוקול בצקת ריאות?",
+      "answers": [
+        {"text": "פרוטוקול לטיפול בבצקת ריאות כולל CPAP ותרופות", "correct": true},
+        {"text": "פרוטוקול לטיפול בדלקת ריאות", "correct": false},
+        {"text": "פרוטוקול לטיפול ב-PE", "correct": false},
+        {"text": "פרוטוקול לטיפול באסטמה", "correct": false}
+      ],
+      "explanation": "פרוטוקול בצקת ריאות כולל שימוש ב-CPAP, ניטרטים ודיאורטיקה (פורוסמיד) לטיפול בבצקת ריאות קרדיאלית."
+    },
+    {
+      "category": "פרוטוקולים",
+      "level": "basic",
+      "question": "מהו פרוטוקול אסטמה?",
+      "answers": [
+        {"text": "פרוטוקול לטיפול בהתקף אסטמה עם מרחיבי סימפונות", "correct": true},
+        {"text": "פרוטוקול לטיפול בדלקת ריאות", "correct": false},
+        {"text": "פרוטוקול לטיפול בבצקת ריאות", "correct": false},
+        {"text": "פרוטוקול לטיפול בפרכוסים", "correct": false}
+      ],
+      "explanation": "פרוטוקול אסטמה כולל מתן מרחיבי סימפונות (ונטולין, אטרוונט), סטרואידים ובמקרה קשה CPAP."
+    },
+    {
+      "category": "פרוטוקולים",
+      "level": "intermediate",
+      "question": "מהו פרוטוקול פרכוסים?",
+      "answers": [
+        {"text": "פרוטוקול לטיפול בפעילות פרכוסית כולל בנזודיאזפינים", "correct": true},
+        {"text": "פרוטוקול לטיפול בשבץ", "correct": false},
+        {"text": "פרוטוקול לטיפול בהתעלפות", "correct": false},
+        {"text": "פרוטוקול לטיפול בכאב ראש", "correct": false}
+      ],
+      "explanation": "פרוטוקול פרכוסים כולל בדיקת גלוקוז, מתן בנזודיאזפינים (מידאזולם) ובקרת נתיב אוויר."
+    },
+    {
+      "category": "פרוטוקולים",
+      "level": "advanced",
+      "question": "מהו פרוטוקול Asystole & PEA?",
+      "answers": [
+        {"text": "פרוטוקול לטיפול בדום לב עם קצבים שאינם ניתנים לדפיברילציה", "correct": true},
+        {"text": "פרוטוקול לטיפול ב-VF/VT", "correct": false},
+        {"text": "פרוטוקול לטיפול בברדיקרדיה", "correct": false},
+        {"text": "פרוטוקול לטיפול בטכיקרדיה", "correct": false}
+      ],
+      "explanation": "פרוטוקול זה מיועד לטיפול בדום לב מסוג אסיסטולה (קו ישר) או PEA (פעילות חשמלית ללא דופק)."
+    },
+    {
+      "category": "אלקטרוליטים",
+      "level": "basic",
+      "question": "מהו תפקיד האלקטרוליטים בגוף?",
+      "answers": [
+        {"text": "אחראיים על הפעילות הכימית והחשמלית בתאים", "correct": true},
+        {"text": "אחראיים רק על איזון נוזלים", "correct": false},
+        {"text": "אחראיים רק על הולכה עצבית", "correct": false},
+        {"text": "אחראיים רק על התכווצות שרירים", "correct": false}
+      ],
+      "explanation": "אלקטרוליטים (Electrolytes) הם מרכיבים אנ-אורגניים האחראיים על הפעילות הכימית והחשמלית בתאים."
+    },
+    {
+      "category": "אלקטרוליטים",
+      "level": "basic",
+      "question": "מהם האלקטרוליטים העיקריים בגוף?",
+      "answers": [
+        {"text": "Potassium, Magnesium, Phosphate, Sodium, Calcium, Chloride", "correct": true},
+        {"text": "רק נתרן ואשלגן", "correct": false},
+        {"text": "רק סידן ומגנזיום", "correct": false},
+        {"text": "רק כלוריד ופוספט", "correct": false}
+      ],
+      "explanation": "האלקטרוליטים העיקריים הם: K+, Mg2+, PO43-, Na+, Ca2+, Cl-."
+    },
+    {
+      "category": "אלקטרוליטים",
+      "level": "intermediate",
+      "question": "מה קורה כאשר Sodium עובר מהתסנין לדם?",
+      "answers": [
+        {"text": "גורם למעבר פסיבי של Potassium אל הנפרון", "correct": true},
+        {"text": "גורם לעלייה ב-Potassium בדם", "correct": false},
+        {"text": "גורם לירידה ב-Calcium", "correct": false},
+        {"text": "לא משפיע על אלקטרוליטים אחרים", "correct": false}
+      ],
+      "explanation": "ספיגה חוזרת של נתרן (יון חיובי) גורמת למעבר פסיבי של אשלגן (גם יון חיובי) אל הנפרון."
+    },
+    {
+      "category": "אלקטרוליטים",
+      "level": "intermediate",
+      "question": "מהו Ionized Calcium?",
+      "answers": [
+        {"text": "סידן מיונן (Ca++) הפעיל בגוף", "correct": true},
+        {"text": "סידן הקשור לחלבון", "correct": false},
+        {"text": "סידן באגירה בעצמות", "correct": false},
+        {"text": "תוסף סידן", "correct": false}
+      ],
+      "explanation": "Ionized Calcium (Ca++) הוא הצורה הפעילה של הסידן בגוף, חשוב להתכווצות שרירים והולכה עצבית."
+    },
+    {
+      "category": "אלקטרוליטים",
+      "level": "advanced",
+      "question": "מהו תפקיד Potassium-Sparing Diuretics?",
+      "answers": [
+        {"text": "משתנים ששומרים על אשלגן ומונעים אובדן שלו", "correct": true},
+        {"text": "משתנים המגבירים הפרשת אשלגן", "correct": false},
+        {"text": "תרופות להעלאת אשלגן בלבד", "correct": false},
+        {"text": "תרופות להורדת אשלגן", "correct": false}
+      ],
+      "explanation": "Potassium-Sparing Diuretics הם משתנים מיוחדים ששומרים על אשלגן ומונעים אובדן יתר שלו בשתן."
+    },
+    {
+      "category": "מערכות נוספות",
+      "level": "basic",
+      "question": "מהו Diabetes Mellitus?",
+      "answers": [
+        {"text": "סוכרת - מחלה של הפרעה בייצור או שימוש באינסולין", "correct": true},
+        {"text": "מחלת כליות", "correct": false},
+        {"text": "מחלת לב", "correct": false},
+        {"text": "מחלת ריאות", "correct": false}
+      ],
+      "explanation": "Diabetes Mellitus (סוכרת) היא מחלה בה הגוף אינו מייצר מספיק אינסולין או לא משתמש בו כראוי."
+    },
+    {
+      "category": "מערכות נוספות",
+      "level": "intermediate",
+      "question": "מהו DKA (Diabetic Ketoacidosis)?",
+      "answers": [
+        {"text": "חמצת קטואצידוטית סוכרתית - סיבוך של סוכרת Type 1", "correct": true},
+        {"text": "סיבוך של סוכרת Type 2 בלבד", "correct": false},
+        {"text": "היפוגליקמיה חמורה", "correct": false},
+        {"text": "עודף אינסולין", "correct": false}
+      ],
+      "explanation": "DKA היא חמצת קטואצידוטית שבה יש הרבה סוכר בדם אבל בתאים אין, טיפוסי ל-Type 1 Diabetes."
+    },
+    {
+      "category": "מערכות נוספות",
+      "level": "basic",
+      "question": "מהו Stroke (שבץ)?",
+      "answers": [
+        {"text": "הפרעה נוירולוגית חריפה עקב הפסקת אספקת הדם למוח", "correct": true},
+        {"text": "דום לב", "correct": false},
+        {"text": "התקף פרכוסים", "correct": false},
+        {"text": "התעלפות", "correct": false}
+      ],
+      "explanation": "Stroke הוא הפרעה נוירולוגית חריפה הנגרמת מהפסקה באספקת הדם למוח (איסכמי או דימומי)."
+    },
+    {
+      "category": "מערכות נוספות",
+      "level": "intermediate",
+      "question": "מהו Syncope?",
+      "answers": [
+        {"text": "התעלפות - אובדן הכרה זמני עקב היפו-פרפוזיה מוחית", "correct": true},
+        {"text": "פרכוס", "correct": false},
+        {"text": "שבץ", "correct": false},
+        {"text": "דום לב", "correct": false}
+      ],
+      "explanation": "Syncope היא התעלפות - אובדן הכרה זמני עקב היפו-פרפוזיה (אספקת דם לקויה) למוח."
+    },
+    {
+      "category": "מערכות נוספות",
+      "level": "advanced",
+      "question": "מהו Hypertension Crisis?",
+      "answers": [
+        {"text": "משבר יתר לחץ דם - עלייה משמעותית ומסכנת חיים בלחץ הדם", "correct": true},
+        {"text": "לחץ דם נמוך מאוד", "correct": false},
+        {"text": "לחץ דם תקין", "correct": false},
+        {"text": "הפרעת קצב", "correct": false}
+      ],
+      "explanation": "Hypertension Crisis הוא משבר בו לחץ הדם עולה בצורה מאוד משמעותית ברמה מסכנת חיים."
+    }
+  ]
+}
