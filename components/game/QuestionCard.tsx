@@ -6,6 +6,7 @@ import { Button } from '@/components/ui/button'
 import type { QuestionWithAnswers } from '@/types/database.types'
 import { cn } from '@/lib/utils'
 import Image from 'next/image'
+import { useMemo } from 'react'
 
 interface QuestionCardProps {
   question: QuestionWithAnswers
@@ -26,7 +27,16 @@ export function QuestionCard({
   isCorrect = null,
   disabled = false,
 }: QuestionCardProps) {
-  const sortedAnswers = [...question.answers].sort((a, b) => a.order_num - b.order_num)
+  // Shuffle answers randomly but keep the same order during re-renders using useMemo
+  const shuffledAnswers = useMemo(() => {
+    const answers = [...question.answers]
+    // Fisher-Yates shuffle algorithm
+    for (let i = answers.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [answers[i], answers[j]] = [answers[j], answers[i]]
+    }
+    return answers
+  }, [question.id]) // Shuffle once per question (when question.id changes)
 
   return (
     <Card className="w-full max-w-3xl mx-auto">
@@ -54,7 +64,7 @@ export function QuestionCard({
         )}
 
         <div className="space-y-3">
-          {sortedAnswers.map((answer, index) => {
+          {shuffledAnswers.map((answer, index) => {
             const isSelected = selectedAnswerId === answer.id
             const isCorrectAnswer = answer.is_correct
             const showCorrect = showResult && isCorrectAnswer

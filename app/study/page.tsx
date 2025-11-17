@@ -158,7 +158,6 @@ export default function StudyPage() {
                         <Checkbox
                           id={category.id}
                           checked={selectedCategories.includes(category.id)}
-                          onCheckedChange={() => toggleCategory(category.id)}
                         />
                         <Label htmlFor={category.id} className="flex-1 cursor-pointer">
                           {category.name}
