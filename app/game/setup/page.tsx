@@ -61,6 +61,10 @@ export default function GameSetupPage() {
   }
 
   const handleStartGame = async () => {
+    console.log('🎮 handleStartGame called')
+    console.log('Selected categories:', selectedCategories)
+    console.log('Question count:', questionCount)
+
     if (selectedCategories.length === 0) {
       setError('יש לבחור לפחות קטגוריה אחת')
       return
@@ -75,6 +79,7 @@ export default function GameSetupPage() {
     setLoading(true)
 
     try {
+      console.log('📝 Creating game...')
       // Create game
       const { data: game, error: gameError } = await (supabase
         .from('games') as any)
@@ -89,8 +94,10 @@ export default function GameSetupPage() {
         .single()
 
       if (gameError) throw gameError
+      console.log('✅ Game created:', game.id)
 
       // Link categories to game
+      console.log('🔗 Linking categories to game...')
       const { error: categoriesError } = await (supabase
         .from('game_categories') as any)
         .insert(
@@ -101,17 +108,23 @@ export default function GameSetupPage() {
         )
 
       if (categoriesError) throw categoriesError
+      console.log('✅ Categories linked')
 
       // Get random questions from selected categories
+      console.log('🔍 Fetching questions from categories:', selectedCategories)
       const { data: questions, error: questionsError } = await supabase
         .from('questions')
         .select('id, category_id, question_text')
         .eq('status', 'approved')
         .in('category_id', selectedCategories)
 
-      if (questionsError) throw questionsError
+      if (questionsError) {
+        console.error('❌ Error fetching questions:', questionsError)
+        throw questionsError
+      }
 
-      console.log(`Found ${questions?.length || 0} approved questions in selected categories`)
+      console.log(`✅ Found ${questions?.length || 0} approved questions in selected categories`)
+      console.log('Questions data:', questions)
 
       // Shuffle and limit questions
       const shuffled = (questions as any).sort(() => Math.random() - 0.5)
@@ -136,10 +149,15 @@ export default function GameSetupPage() {
       if (gameQuestionsError) throw gameQuestionsError
 
       // Redirect to game
+      console.log('🚀 Redirecting to game:', game.id)
       router.push(`/game/play/${game.id}`)
     } catch (err: any) {
+      console.error('❌ Error in handleStartGame:', err)
+      console.error('Error message:', err.message)
+      console.error('Error details:', err)
       setError(err.message || 'אירעה שגיאה ביצירת המשחק')
     } finally {
+      console.log('🏁 handleStartGame finished')
       setLoading(false)
     }
   }
