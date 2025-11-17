@@ -1,6 +1,6 @@
 'use client'
 
-import { useState, useEffect, use } from 'react'
+import { useState, useEffect, use, useMemo } from 'react'
 import { useQuery, useMutation, useQueryClient } from '@tanstack/react-query'
 import { createClient } from '@/lib/supabase/client'
 import { QuestionCard } from '@/components/game/QuestionCard'
@@ -14,6 +14,16 @@ import { X } from 'lucide-react'
 
 interface PageProps {
   params: Promise<{ id: string }>
+}
+
+// Fisher-Yates shuffle algorithm
+function shuffleArray<T>(array: T[]): T[] {
+  const shuffled = [...array]
+  for (let i = shuffled.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]]
+  }
+  return shuffled
 }
 
 export default function GamePlayPage({ params }: PageProps) {
@@ -117,22 +127,22 @@ export default function GamePlayPage({ params }: PageProps) {
     },
   })
 
-  // Keyboard support
+  // Shuffle answers for current question - same shuffle used for both UI and keyboard
+  const currentQuestion = gameData?.questions?.[currentQuestionIndex]
+  const shuffledAnswers = useMemo(() => {
+    if (!currentQuestion?.question?.answers) return []
+    return shuffleArray(currentQuestion.question.answers)
+  }, [currentQuestion?.question?.id])
+
+  // Keyboard support - uses same shuffled answers as UI
   useEffect(() => {
-    if (showResult || gameCompleted) return
+    if (showResult || gameCompleted || shuffledAnswers.length === 0) return
 
     const handleKeyPress = (e: KeyboardEvent) => {
-      const currentQuestion = gameData?.questions[currentQuestionIndex]
-      if (!currentQuestion) return
-
-      const sortedAnswers = [...currentQuestion.question.answers].sort(
-        (a, b) => a.order_num - b.order_num
-      )
-
       if (['1', '2', '3', '4'].includes(e.key)) {
         const index = parseInt(e.key) - 1
-        if (sortedAnswers[index]) {
-          setSelectedAnswerId(sortedAnswers[index].id)
+        if (shuffledAnswers[index]) {
+          setSelectedAnswerId((shuffledAnswers[index] as any).id)
         }
       }
 
@@ -143,7 +153,7 @@ export default function GamePlayPage({ params }: PageProps) {
 
     window.addEventListener('keydown', handleKeyPress)
     return () => window.removeEventListener('keydown', handleKeyPress)
-  }, [selectedAnswerId, showResult, gameData, currentQuestionIndex, gameCompleted])
+  }, [selectedAnswerId, showResult, gameCompleted, shuffledAnswers])
 
   const handleSubmitAnswer = async () => {
     if (!selectedAnswerId || !gameData) return
@@ -238,8 +248,6 @@ export default function GamePlayPage({ params }: PageProps) {
     )
   }
 
-  const currentQuestion = gameData.questions[currentQuestionIndex]
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 dark:from-gray-900 dark:to-gray-800 p-4">
       <div className="container mx-auto max-w-4xl py-8 space-y-6">
@@ -266,6 +274,7 @@ export default function GamePlayPage({ params }: PageProps) {
         {/* Question Card */}
         <QuestionCard
           question={currentQuestion.question}
+          shuffledAnswers={shuffledAnswers}
           selectedAnswerId={selectedAnswerId}
           onSelectAnswer={setSelectedAnswerId}
           onSubmit={handleSubmitAnswer}

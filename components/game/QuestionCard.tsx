@@ -10,6 +10,7 @@ import { useMemo } from 'react'
 
 interface QuestionCardProps {
   question: QuestionWithAnswers
+  shuffledAnswers?: any[] // Optional pre-shuffled answers from parent
   selectedAnswerId: string | null
   onSelectAnswer: (answerId: string) => void
   onSubmit: () => void
@@ -30,6 +31,7 @@ function shuffleArray<T>(array: T[]): T[] {
 
 export function QuestionCard({
   question,
+  shuffledAnswers: providedShuffledAnswers,
   selectedAnswerId,
   onSelectAnswer,
   onSubmit,
@@ -37,8 +39,8 @@ export function QuestionCard({
   isCorrect = null,
   disabled = false,
 }: QuestionCardProps) {
-  // Shuffle answers - useMemo ensures same shuffle for same question
-  const shuffledAnswers = useMemo(
+  // Use provided shuffled answers if available, otherwise shuffle ourselves
+  const shuffledAnswers = providedShuffledAnswers || useMemo(
     () => shuffleArray(question.answers),
     [question.id]
   )
