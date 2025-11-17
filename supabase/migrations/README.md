@@ -1,5 +1,18 @@
 # Database Migrations
 
+## Quick Start - Fix Current Issues
+
+**אם הקטגוריות לא נטענות או הרישום לא עובד, הרץ את הקובץ הזה ראשון:**
+
+```sql
+-- Copy and run this in Supabase SQL Editor:
+supabase/migrations/fix_rls_policies.sql
+```
+
+זה יתקן את כל מדיניות ההרשאות (RLS) לכל הטבלאות.
+
+---
+
 ## How to Apply Migrations
 
 ### Option 1: Supabase Dashboard (Recommended)
@@ -25,7 +38,31 @@ supabase db execute --file supabase/migrations/add_profile_insert_policy.sql
 
 ## Current Migrations
 
-### `add_profile_insert_policy.sql` (2025-01-17)
+### `fix_rls_policies.sql` (2025-01-17) ⭐ **RUN THIS FIRST**
+
+**Purpose:** Fix all RLS policies for the entire application
+
+**Issues it solves:**
+- קטגוריות לא נטענות (Categories not loading)
+- רישום לא עובד (Registration not working)
+- שאלות לא נטענות (Questions not loading)
+- משחקים לא נשמרים (Games not saving)
+
+**What it does:**
+- Enables RLS on all tables
+- Creates/updates all necessary SELECT, INSERT, UPDATE policies
+- Fixes permissions for profiles, categories, questions, answers, games
+
+**To apply:**
+Copy the entire contents of `fix_rls_policies.sql` into Supabase SQL Editor and run it.
+
+**This migration is idempotent** - you can run it multiple times safely.
+
+---
+
+### `add_profile_insert_policy.sql` (2025-01-17) - DEPRECATED
+
+**Note:** This migration is now included in `fix_rls_policies.sql`. Use that instead.
 
 **Purpose:** Fix registration issue where new users cannot create their profile
 
