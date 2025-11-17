@@ -105,18 +105,20 @@ export default function GameSetupPage() {
       // Get random questions from selected categories
       const { data: questions, error: questionsError } = await supabase
         .from('questions')
-        .select('id')
+        .select('id, category_id, question_text')
         .eq('status', 'approved')
         .in('category_id', selectedCategories)
 
       if (questionsError) throw questionsError
+
+      console.log(`Found ${questions?.length || 0} approved questions in selected categories`)
 
       // Shuffle and limit questions
       const shuffled = (questions as any).sort(() => Math.random() - 0.5)
       const selectedQuestions = shuffled.slice(0, questionCount)
 
       if (selectedQuestions.length < questionCount) {
-        setError(`יש רק ${selectedQuestions.length} שאלות זמינות בקטגוריות שנבחרו`)
+        setError(`יש רק ${selectedQuestions.length} שאלות זמינות בקטגוריות שנבחרו (ביקשת ${questionCount})`)
         return
       }
 

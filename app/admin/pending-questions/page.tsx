@@ -113,7 +113,13 @@ export default function PendingQuestionsPage() {
       if (error) throw error
     },
     onSuccess: () => {
+      // Invalidate all question-related queries
       queryClient.invalidateQueries({ queryKey: ['pending-questions'] })
+      queryClient.invalidateQueries({ queryKey: ['questions'] })
+      queryClient.invalidateQueries({ queryKey: ['study-questions'] })
+
+      // Force refetch to update UI
+      queryClient.refetchQueries({ queryKey: ['pending-questions'] })
     },
   })
 
