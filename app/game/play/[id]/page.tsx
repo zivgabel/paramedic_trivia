@@ -50,7 +50,7 @@ export default function GamePlayPage({ params }: PageProps) {
           question:questions(
             *,
             category:categories(*),
-            answers(*)
+            answers(id, question_id, answer_text, is_correct, order_num)
           )
         `)
         .eq('game_id', gameId)

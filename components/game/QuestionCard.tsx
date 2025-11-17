@@ -18,6 +18,16 @@ interface QuestionCardProps {
   disabled?: boolean
 }
 
+// Fisher-Yates shuffle algorithm
+function shuffleArray<T>(array: T[]): T[] {
+  const shuffled = [...array]
+  for (let i = shuffled.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]]
+  }
+  return shuffled
+}
+
 export function QuestionCard({
   question,
   selectedAnswerId,
@@ -27,16 +37,11 @@ export function QuestionCard({
   isCorrect = null,
   disabled = false,
 }: QuestionCardProps) {
-  // Shuffle answers randomly but keep the same order during re-renders using useMemo
-  const shuffledAnswers = useMemo(() => {
-    const answers = [...question.answers]
-    // Fisher-Yates shuffle algorithm
-    for (let i = answers.length - 1; i > 0; i--) {
-      const j = Math.floor(Math.random() * (i + 1));
-      [answers[i], answers[j]] = [answers[j], answers[i]]
-    }
-    return answers
-  }, [question.id]) // Shuffle once per question (when question.id changes)
+  // Shuffle answers - useMemo ensures same shuffle for same question
+  const shuffledAnswers = useMemo(
+    () => shuffleArray(question.answers),
+    [question.id]
+  )
 
   return (
     <Card className="w-full max-w-3xl mx-auto">
