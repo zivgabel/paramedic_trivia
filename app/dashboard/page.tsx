@@ -92,7 +92,15 @@ export default function DashboardPage() {
               </div>
               <CardDescription>כלים למדריכים ומנהלים</CardDescription>
             </CardHeader>
-            <CardContent className="grid grid-cols-1 md:grid-cols-3 gap-4">
+            <CardContent className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+              <Button variant="outline" asChild>
+                <Link href="/admin/pending-questions">
+                  שאלות ממתינות
+                  <span className="mr-2 text-xs bg-orange-500 text-white px-2 py-0.5 rounded-full">
+                    חדש
+                  </span>
+                </Link>
+              </Button>
               <Button variant="outline" asChild>
                 <Link href="/admin/questions">ניהול שאלות</Link>
               </Button>
