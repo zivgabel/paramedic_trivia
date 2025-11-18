@@ -34,6 +34,27 @@ export default function GameSetupPage() {
     },
   })
 
+  // Count approved questions per category
+  const { data: questionCounts } = useQuery({
+    queryKey: ['question-counts'],
+    queryFn: async () => {
+      const { data, error } = await supabase
+        .from('questions')
+        .select('id, category_id')
+        .eq('status', 'approved')
+
+      if (error) throw error
+
+      // Count questions per category
+      const counts: Record<string, number> = {}
+      data?.forEach((q: any) => {
+        counts[q.category_id] = (counts[q.category_id] || 0) + 1
+      })
+
+      return counts
+    },
+  })
+
   const { data: user } = useQuery({
     queryKey: ['user'],
     queryFn: async () => {
@@ -203,26 +224,27 @@ export default function GameSetupPage() {
                 <div className="text-center py-8">טוען קטגוריות...</div>
               ) : categories && categories.length > 0 ? (
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
-                  {categories.map((category: any) => (
-                    <div
-                      key={category.id}
-                      className="flex items-center space-x-2 space-x-reverse p-3 border rounded-lg hover:bg-accent cursor-pointer"
-                      onClick={() => toggleCategory(category.id)}
-                    >
-                      <Checkbox
-                        id={category.id}
-                        checked={selectedCategories.includes(category.id)}
-                      />
-                      <Label htmlFor={category.id} className="flex-1 cursor-pointer">
-                        {category.name}
-                        {category.description && (
+                  {categories.map((category: any) => {
+                    const count = questionCounts?.[category.id] || 0
+                    return (
+                      <div
+                        key={category.id}
+                        className="flex items-center space-x-2 space-x-reverse p-3 border rounded-lg hover:bg-accent cursor-pointer"
+                        onClick={() => toggleCategory(category.id)}
+                      >
+                        <Checkbox
+                          id={category.id}
+                          checked={selectedCategories.includes(category.id)}
+                        />
+                        <Label htmlFor={category.id} className="flex-1 cursor-pointer">
+                          {category.name}
                           <span className="text-xs text-muted-foreground block">
-                            {category.description}
+                            {count} {count === 1 ? 'שאלה זמינה' : 'שאלות זמינות'}
                           </span>
-                        )}
-                      </Label>
-                    </div>
-                  ))}
+                        </Label>
+                      </div>
+                    )
+                  })}
                 </div>
               ) : (
                 <Alert>
