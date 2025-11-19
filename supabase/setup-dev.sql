@@ -8,61 +8,7 @@
 -- =====================================================
 
 -- =====================================================
--- 1. HELPER FUNCTIONS
--- =====================================================
-
--- Function to check if user is admin or instructor
-CREATE OR REPLACE FUNCTION public.is_admin()
-RETURNS BOOLEAN
-LANGUAGE sql
-SECURITY DEFINER
-SET search_path = public
-STABLE
-AS $$
-  SELECT EXISTS (
-    SELECT 1 FROM public.profiles
-    WHERE id = auth.uid()
-    AND role IN ('admin', 'instructor')
-  );
-$$;
-
--- Function to automatically create profile when user registers
-CREATE OR REPLACE FUNCTION public.handle_new_user()
-RETURNS TRIGGER
-LANGUAGE plpgsql
-SECURITY DEFINER
-SET search_path = public
-AS $$
-BEGIN
-  INSERT INTO public.profiles (id, email, full_name, role, is_active, created_at, updated_at)
-  VALUES (
-    NEW.id,
-    NEW.email,
-    COALESCE(
-      NEW.raw_user_meta_data->>'full_name',
-      NEW.raw_user_meta_data->>'name',
-      split_part(NEW.email, '@', 1)
-    ),
-    'user',
-    true,
-    NOW(),
-    NOW()
-  );
-  RETURN NEW;
-END;
-$$;
-
--- Function to update updated_at timestamp
-CREATE OR REPLACE FUNCTION public.update_updated_at_column()
-RETURNS TRIGGER AS $$
-BEGIN
-  NEW.updated_at = NOW();
-  RETURN NEW;
-END;
-$$ language 'plpgsql';
-
--- =====================================================
--- 2. TABLES
+-- 1. TABLES (Create tables first, then functions)
 -- =====================================================
 
 -- Profiles table (extends auth.users)
@@ -140,6 +86,60 @@ CREATE TABLE IF NOT EXISTS public.game_questions (
   question_order INT NOT NULL,
   created_at TIMESTAMPTZ DEFAULT NOW()
 );
+
+-- =====================================================
+-- 2. HELPER FUNCTIONS (Create after tables exist)
+-- =====================================================
+
+-- Function to check if user is admin or instructor
+CREATE OR REPLACE FUNCTION public.is_admin()
+RETURNS BOOLEAN
+LANGUAGE sql
+SECURITY DEFINER
+SET search_path = public
+STABLE
+AS $$
+  SELECT EXISTS (
+    SELECT 1 FROM public.profiles
+    WHERE id = auth.uid()
+    AND role IN ('admin', 'instructor')
+  );
+$$;
+
+-- Function to automatically create profile when user registers
+CREATE OR REPLACE FUNCTION public.handle_new_user()
+RETURNS TRIGGER
+LANGUAGE plpgsql
+SECURITY DEFINER
+SET search_path = public
+AS $$
+BEGIN
+  INSERT INTO public.profiles (id, email, full_name, role, is_active, created_at, updated_at)
+  VALUES (
+    NEW.id,
+    NEW.email,
+    COALESCE(
+      NEW.raw_user_meta_data->>'full_name',
+      NEW.raw_user_meta_data->>'name',
+      split_part(NEW.email, '@', 1)
+    ),
+    'user',
+    true,
+    NOW(),
+    NOW()
+  );
+  RETURN NEW;
+END;
+$$;
+
+-- Function to update updated_at timestamp
+CREATE OR REPLACE FUNCTION public.update_updated_at_column()
+RETURNS TRIGGER AS $$
+BEGIN
+  NEW.updated_at = NOW();
+  RETURN NEW;
+END;
+$$ language 'plpgsql';
 
 -- =====================================================
 -- 3. INDEXES
