@@ -1,0 +1,11 @@
+# This file defines code owners for the repository
+# Each line is a file pattern followed by one or more owners
+
+# Default owner for everything in the repo
+* @zivgabel
+
+# Specific ownership (examples - customize as needed)
+/app/** @zivgabel
+/supabase/** @zivgabel
+/components/** @zivgabel
+/lib/** @zivgabel
