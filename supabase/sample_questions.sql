@@ -88,7 +88,7 @@ BEGIN
     gen_random_uuid(),
     'איזה איבר נמצא ב-Mediastinum?',
     cat_אנטומיה_id,
-    'approved',
+    'pending',
     'המדיאסטינום הוא החלל בחזה שבין שתי הריאות ובו נמצאים הלב, הקנה והוושט.',
     'YOUR_ADMIN_USER_ID'
   )
@@ -142,7 +142,7 @@ BEGIN
     gen_random_uuid(),
     'מהו Cardiac Output?',
     cat_פיזיולוגיה_id,
-    'approved',
+    'pending',
     'Cardiac Output הוא כמות הדם שהלב שואב בדקה אחת, ומחושב כמכפלה של קצב הלב ב-Stroke Volume.',
     'YOUR_ADMIN_USER_ID'
   )
@@ -214,7 +214,7 @@ BEGIN
     gen_random_uuid(),
     'מהו תפקיד מערכת הנשימה?',
     cat_מערכת_נשימתית_id,
-    'approved',
+    'pending',
     'מערכת הנשימה (Respiratory System) אחראית על תהליך הנשימה, חילוף גזים, ואיזון חומצה-בסיס.',
     'YOUR_ADMIN_USER_ID'
   )
@@ -250,7 +250,7 @@ BEGIN
     gen_random_uuid(),
     'איזה מרכז נשימה יושב ב-Pons?',
     cat_מערכת_נשימתית_id,
-    'approved',
+    'pending',
     'מרכז נשימה נוסף יושב ב-Pons ונקרא Pontine Respiratory Group, פועל כשיש צורך בהעמקת הנשימה.',
     'YOUR_ADMIN_USER_ID'
   )
@@ -304,7 +304,7 @@ BEGIN
     gen_random_uuid(),
     'מהו IHD (Ischemic Heart Disease)?',
     cat_מערכת_קרדיווסקולרית_id,
-    'approved',
+    'pending',
     'IHD (Ischemic Heart Disease) היא מחלת לב איסכמית הנגרמת מחסימה בעורקים הכליליים.',
     'YOUR_ADMIN_USER_ID'
   )
@@ -358,7 +358,7 @@ BEGIN
     gen_random_uuid(),
     'מהו תפקיד נתיב האוויר?',
     cat_נתיב_אוויר_id,
-    'approved',
+    'pending',
     'נתיב האוויר אחראי על העברת אוויר לריאות, הגנה מפני גופים זרים, ואיזון חומצה-בסיס.',
     'YOUR_ADMIN_USER_ID'
   )
@@ -412,7 +412,7 @@ BEGIN
     gen_random_uuid(),
     'מהו Epinephrine (אדרנלין)?',
     cat_פרמקולוגיה_id,
-    'approved',
+    'pending',
     'Epinephrine הוא הורמון של המערכת הסימפתטית המופרש מה-Adrenal Medulla, משמש בהחייאה ובאנאפילקסיס.',
     'YOUR_ADMIN_USER_ID'
   )
@@ -466,7 +466,7 @@ BEGIN
     gen_random_uuid(),
     'מהו Oxygen?',
     cat_פרמקולוגיה_id,
-    'approved',
+    'pending',
     'חמצן (Oxygen) הוא גז חיוני לחיים המשמש לטיפול בהיפוקסיה והעלאת רמת החמצן בדם.',
     'YOUR_ADMIN_USER_ID'
   )
@@ -520,7 +520,7 @@ BEGIN
     gen_random_uuid(),
     'מהי Sinus Tachycardia?',
     cat_קרדיולוגיה_id,
-    'approved',
+    'pending',
     'Sinus Tachycardia היא קצב סינוסי תקין אבל מהיר (מעל 100 פעימות לדקה).',
     'YOUR_ADMIN_USER_ID'
   )
@@ -610,7 +610,7 @@ BEGIN
     gen_random_uuid(),
     'מהו פרוטוקול אנאפילקסיס?',
     cat_פרוטוקולים_id,
-    'approved',
+    'pending',
     'פרוטוקול אנאפילקסיס מיועד לטיפול בתגובה אלרגית חמורה ומסכנת חיים.',
     'YOUR_ADMIN_USER_ID'
   )
@@ -866,7 +866,7 @@ BEGIN
     gen_random_uuid(),
     'מהי ההגדרה של Acute Respiratory Failure?',
     cat_מערכת_נשימתית_id,
-    'approved',
+    'pending',
     'Acute Respiratory Failure היא אי ספיקה נשימתית חריפה המהווה אחד ממצבי החירום הנפוצים ביותר.',
     'YOUR_ADMIN_USER_ID'
   )
@@ -1082,7 +1082,7 @@ BEGIN
     gen_random_uuid(),
     'מהו CPAP (Continuous Positive Airway Pressure)?',
     cat_נתיב_אוויר_id,
-    'approved',
+    'pending',
     'CPAP היא שיטה לאספקת תמיכה נשימתית לא פולשנית בלחץ חיובי רציף.',
     'YOUR_ADMIN_USER_ID'
   )
@@ -1208,7 +1208,7 @@ BEGIN
     gen_random_uuid(),
     'מהו STEMI?',
     cat_קרדיולוגיה_id,
-    'approved',
+    'pending',
     'STEMI הוא אוטם שריר הלב עם עליות של מקטע ה-ST ב-ECG, מצריך טיפול דחוף.',
     'YOUR_ADMIN_USER_ID'
   )
@@ -1536,7 +1536,7 @@ BEGIN
     gen_random_uuid(),
     'מהי הבעיה העיקרית ב-ARDS (Acute Respiratory Distress Syndrome)?',
     cat_מערכת_נשימתית_id,
-    'approved',
+    'pending',
     'ARDS היא בצקת ריאות שלא על רקע קרדיאלי (non-cardiogenic), ללא מנגנון קומפנסציה של הלב.',
     'YOUR_ADMIN_USER_ID'
   )
@@ -1608,7 +1608,7 @@ BEGIN
     gen_random_uuid(),
     'מה קורה לברדיקרדיה מתחת ל-50 פעימות לדקה?',
     cat_מערכת_קרדיווסקולרית_id,
-    'approved',
+    'pending',
     'ברדיקרדיה מתחת ל-50 מוריד את ה-Cardiac Output בצורה מסוכנת ולכן מופיעים סימנים קליניים של ירידות לחץ.',
     'YOUR_ADMIN_USER_ID'
   )
