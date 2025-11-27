@@ -55,8 +55,8 @@ export default function JoinKahootPage() {
   const { data: room, isLoading: roomLoading } = useQuery({
     queryKey: ['kahoot-room', roomCode],
     queryFn: async () => {
-      const { data, error } = await supabase
-        .from('kahoot_rooms')
+      const { data, error } = await (supabase
+        .from('kahoot_rooms') as any)
         .select('*')
         .eq('room_code', roomCode)
         .single()
@@ -99,8 +99,8 @@ export default function JoinKahootPage() {
 
     try {
       // Create participant record
-      const { data: participant, error: participantError } = await supabase
-        .from('kahoot_participants')
+      const { data: participant, error: participantError } = await (supabase
+        .from('kahoot_participants') as any)
         .insert({
           room_code: roomCode,
           nickname: nickname.trim(),

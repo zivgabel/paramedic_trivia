@@ -34,8 +34,8 @@ export default function PlayerKahootGamePage() {
 
     // Fetch participant data
     const fetchParticipant = async () => {
-      const { data, error } = await supabase
-        .from('kahoot_participants')
+      const { data, error } = await (supabase
+        .from('kahoot_participants') as any)
         .select('*')
         .eq('id', participantId)
         .single()
@@ -49,8 +49,8 @@ export default function PlayerKahootGamePage() {
       setParticipant(data)
 
       // Update last_seen and is_connected
-      await supabase
-        .from('kahoot_participants')
+      await (supabase
+        .from('kahoot_participants') as any)
         .update({
           is_connected: true,
           last_seen: new Date().toISOString(),
@@ -62,8 +62,8 @@ export default function PlayerKahootGamePage() {
 
     // Heartbeat to keep connection alive
     const heartbeat = setInterval(async () => {
-      await supabase
-        .from('kahoot_participants')
+      await (supabase
+        .from('kahoot_participants') as any)
         .update({ last_seen: new Date().toISOString() })
         .eq('id', participantId)
     }, 5000)
@@ -102,8 +102,8 @@ export default function PlayerKahootGamePage() {
   // Subscribe to room changes
   useEffect(() => {
     const fetchRoom = async () => {
-      const { data, error } = await supabase
-        .from('kahoot_rooms')
+      const { data, error } = await (supabase
+        .from('kahoot_rooms') as any)
         .select('*')
         .eq('room_code', roomCode)
         .single()
@@ -161,8 +161,8 @@ export default function PlayerKahootGamePage() {
   const fetchCurrentQuestion = async (questionIndex: number) => {
     if (!room?.game_id) return
 
-    const { data: gameQuestions, error } = await supabase
-      .from('game_questions')
+    const { data: gameQuestions, error } = await (supabase
+      .from('game_questions') as any)
       .select(`
         *,
         question:questions(
@@ -219,7 +219,7 @@ export default function PlayerKahootGamePage() {
 
     try {
       // Submit answer (points will be calculated by host after question ends)
-      await supabase.from('kahoot_answers').insert({
+      await (supabase.from('kahoot_answers') as any).insert({
         room_code: roomCode,
         participant_id: participant.id,
         question_index: room.current_question_index,

@@ -32,8 +32,8 @@ export default function HostKahootGamePage() {
   useEffect(() => {
     const fetchData = async () => {
       // Fetch room
-      const { data: roomData, error: roomError } = await supabase
-        .from('kahoot_rooms')
+      const { data: roomData, error: roomError } = await (supabase
+        .from('kahoot_rooms') as any)
         .select('*')
         .eq('room_code', roomCode)
         .single()
@@ -48,8 +48,8 @@ export default function HostKahootGamePage() {
 
       // Fetch game questions
       if (roomData.game_id) {
-        const { data: questions, error: questionsError } = await supabase
-          .from('game_questions')
+        const { data: questions, error: questionsError } = await (supabase
+          .from('game_questions') as any)
           .select(`
             *,
             question:questions(
@@ -80,8 +80,8 @@ export default function HostKahootGamePage() {
   // Subscribe to participants
   useEffect(() => {
     const fetchParticipants = async () => {
-      const { data, error } = await supabase
-        .from('kahoot_participants')
+      const { data, error } = await (supabase
+        .from('kahoot_participants') as any)
         .select('*')
         .eq('room_code', roomCode)
         .order('score', { ascending: false })
@@ -122,8 +122,8 @@ export default function HostKahootGamePage() {
     if (!room || room.current_question_index < 0) return
 
     const fetchAnswers = async () => {
-      const { data, error } = await supabase
-        .from('kahoot_answers')
+      const { data, error } = await (supabase
+        .from('kahoot_answers') as any)
         .select('*')
         .eq('room_code', roomCode)
         .eq('question_index', room.current_question_index)
@@ -165,8 +165,8 @@ export default function HostKahootGamePage() {
 
     try {
       // Get all answers for current question
-      const { data: allAnswers, error: answersError } = await supabase
-        .from('kahoot_answers')
+      const { data: allAnswers, error: answersError } = await (supabase
+        .from('kahoot_answers') as any)
         .select('*')
         .eq('room_code', roomCode)
         .eq('question_index', room.current_question_index)
@@ -174,7 +174,7 @@ export default function HostKahootGamePage() {
       if (answersError) throw answersError
 
       // Filter correct answers only
-      const correctAnswers = allAnswers?.filter(a => a.is_correct) || []
+      const correctAnswers = allAnswers?.filter((a: any) => a.is_correct) || []
 
       if (correctAnswers.length === 0) {
         console.log('No correct answers for this question')
@@ -182,16 +182,16 @@ export default function HostKahootGamePage() {
       }
 
       // Calculate speed scores: (10 - time_taken)
-      const speedScores = correctAnswers.map(answer => ({
+      const speedScores = correctAnswers.map((answer: any) => ({
         ...answer,
         speedScore: Math.max(0, 10 - answer.time_taken),
       }))
 
       // Sum all speed scores
-      const totalSpeedScore = speedScores.reduce((sum, answer) => sum + answer.speedScore, 0)
+      const totalSpeedScore = speedScores.reduce((sum: number, answer: any) => sum + answer.speedScore, 0)
 
       // Distribute 1000 points proportionally
-      const pointsDistribution = speedScores.map(answer => ({
+      const pointsDistribution = speedScores.map((answer: any) => ({
         id: answer.id,
         participant_id: answer.participant_id,
         points: totalSpeedScore > 0
@@ -203,21 +203,21 @@ export default function HostKahootGamePage() {
 
       // Update each answer with calculated points
       for (const dist of pointsDistribution) {
-        await supabase
-          .from('kahoot_answers')
+        await (supabase
+          .from('kahoot_answers') as any)
           .update({ points_earned: dist.points })
           .eq('id', dist.id)
 
         // Update participant's total score
-        const { data: participant } = await supabase
-          .from('kahoot_participants')
+        const { data: participant } = await (supabase
+          .from('kahoot_participants') as any)
           .select('score')
           .eq('id', dist.participant_id)
           .single()
 
         if (participant) {
-          await supabase
-            .from('kahoot_participants')
+          await (supabase
+            .from('kahoot_participants') as any)
             .update({ score: participant.score + dist.points })
             .eq('id', dist.participant_id)
         }
@@ -261,8 +261,8 @@ export default function HostKahootGamePage() {
     setAnswers([])
 
     try {
-      const { error } = await supabase
-        .from('kahoot_rooms')
+      const { error } = await (supabase
+        .from('kahoot_rooms') as any)
         .update({
           question_start_time: new Date().toISOString(),
         })
@@ -302,8 +302,8 @@ export default function HostKahootGamePage() {
     setAnswers([])
 
     try {
-      const { error } = await supabase
-        .from('kahoot_rooms')
+      const { error } = await (supabase
+        .from('kahoot_rooms') as any)
         .update({
           current_question_index: nextIndex,
           question_start_time: null,
@@ -339,8 +339,8 @@ export default function HostKahootGamePage() {
     setLoading(true)
 
     try {
-      const { error } = await supabase
-        .from('kahoot_rooms')
+      const { error } = await (supabase
+        .from('kahoot_rooms') as any)
         .update({
           status: 'completed',
           completed_at: new Date().toISOString(),

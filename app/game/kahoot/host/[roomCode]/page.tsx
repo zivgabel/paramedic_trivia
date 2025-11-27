@@ -104,8 +104,8 @@ export default function KahootLobbyPage() {
 
     try {
       // Update room status to 'playing'
-      const { error: updateError } = await supabase
-        .from('kahoot_rooms')
+      const { error: updateError } = await (supabase
+        .from('kahoot_rooms') as any)
         .update({
           status: 'playing',
           started_at: new Date().toISOString(),
