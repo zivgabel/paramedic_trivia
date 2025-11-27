@@ -9,11 +9,14 @@ import { Checkbox } from '@/components/ui/checkbox'
 import { Label } from '@/components/ui/label'
 import { Input } from '@/components/ui/input'
 import { Alert, AlertDescription } from '@/components/ui/alert'
+import { Tabs, TabsList, TabsTrigger } from '@/components/ui/tabs'
 import { createClient } from '@/lib/supabase/client'
-import { ArrowRight } from 'lucide-react'
+import { ArrowRight, Users, User } from 'lucide-react'
 import Link from 'next/link'
+import type { GameMode } from '@/types/database.types'
 
 export default function GameSetupPage() {
+  const [gameMode, setGameMode] = useState<GameMode>('standard')
   const [selectedCategories, setSelectedCategories] = useState<string[]>([])
   const [questionCount, setQuestionCount] = useState(20)
   const [error, setError] = useState('')
@@ -81,8 +84,19 @@ export default function GameSetupPage() {
     setSelectedCategories([])
   }
 
+  // Generate a 6-character alphanumeric room code
+  const generateRoomCode = (): string => {
+    const chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789'
+    let code = ''
+    for (let i = 0; i < 6; i++) {
+      code += chars.charAt(Math.floor(Math.random() * chars.length))
+    }
+    return code
+  }
+
   const handleStartGame = async () => {
     console.log('🎮 handleStartGame called')
+    console.log('Game mode:', gameMode)
     console.log('Selected categories:', selectedCategories)
     console.log('Question count:', questionCount)
 
@@ -100,12 +114,110 @@ export default function GameSetupPage() {
     setLoading(true)
 
     try {
-      console.log('📝 Creating game...')
-      // Create game
+      // For Kahoot mode, create a room and redirect to lobby
+      if (gameMode === 'kahoot') {
+        console.log('🎯 Creating Kahoot room...')
+
+        // Get random questions first to validate count
+        console.log('🔍 Fetching questions from categories:', selectedCategories)
+        const { data: questions, error: questionsError } = await supabase
+          .from('questions')
+          .select('id, category_id, question_text')
+          .eq('status', 'approved')
+          .in('category_id', selectedCategories)
+
+        if (questionsError) {
+          console.error('❌ Error fetching questions:', questionsError)
+          throw questionsError
+        }
+
+        console.log(`✅ Found ${questions?.length || 0} approved questions in selected categories`)
+
+        if ((questions?.length || 0) < questionCount) {
+          setError(`יש רק ${questions?.length || 0} שאלות זמינות בקטגוריות שנבחרו (ביקשת ${questionCount})`)
+          setLoading(false)
+          return
+        }
+
+        // Generate unique room code
+        const roomCode = generateRoomCode()
+        console.log('📋 Generated room code:', roomCode)
+
+        // Create game record
+        const { data: game, error: gameError } = await (supabase
+          .from('games') as any)
+          .insert({
+            user_id: user!.id,
+            game_mode: 'kahoot',
+            total_questions: questionCount,
+            correct_answers: 0,
+            score_percentage: 0,
+            average_time_per_question: 0,
+          })
+          .select()
+          .single()
+
+        if (gameError) throw gameError
+        console.log('✅ Game created:', game.id)
+
+        // Link categories to game
+        console.log('🔗 Linking categories to game...')
+        const { error: categoriesError } = await (supabase
+          .from('game_categories') as any)
+          .insert(
+            selectedCategories.map((categoryId) => ({
+              game_id: game.id,
+              category_id: categoryId,
+            }))
+          )
+
+        if (categoriesError) throw categoriesError
+        console.log('✅ Categories linked')
+
+        // Shuffle and limit questions
+        const shuffled = (questions as any).sort(() => Math.random() - 0.5)
+        const selectedQuestions = shuffled.slice(0, questionCount)
+
+        // Link questions to game
+        const { error: gameQuestionsError } = await (supabase
+          .from('game_questions') as any)
+          .insert(
+            selectedQuestions.map((q: any, index: number) => ({
+              game_id: game.id,
+              question_id: q.id,
+              question_order: index + 1,
+            }))
+          )
+
+        if (gameQuestionsError) throw gameQuestionsError
+
+        // Create Kahoot room
+        const { error: roomError } = await (supabase
+          .from('kahoot_rooms') as any)
+          .insert({
+            room_code: roomCode,
+            host_id: user!.id,
+            game_id: game.id,
+            status: 'waiting',
+            total_questions: questionCount,
+          })
+
+        if (roomError) throw roomError
+        console.log('✅ Kahoot room created')
+
+        // Redirect to lobby
+        console.log('🚀 Redirecting to lobby:', roomCode)
+        router.push(`/game/kahoot/host/${roomCode}`)
+        return
+      }
+
+      // Standard game mode (original flow)
+      console.log('📝 Creating standard game...')
       const { data: game, error: gameError } = await (supabase
         .from('games') as any)
         .insert({
           user_id: user!.id,
+          game_mode: 'standard',
           total_questions: questionCount,
           correct_answers: 0,
           score_percentage: 0,
@@ -153,6 +265,7 @@ export default function GameSetupPage() {
 
       if (selectedQuestions.length < questionCount) {
         setError(`יש רק ${selectedQuestions.length} שאלות זמינות בקטגוריות שנבחרו (ביקשת ${questionCount})`)
+        setLoading(false)
         return
       }
 
@@ -205,6 +318,31 @@ export default function GameSetupPage() {
                 <AlertDescription>{error}</AlertDescription>
               </Alert>
             )}
+
+            {/* Game Mode Selection */}
+            <div className="space-y-4">
+              <Label className="text-lg font-semibold">סוג משחק:</Label>
+              <Tabs value={gameMode} onValueChange={(value) => setGameMode(value as GameMode)}>
+                <TabsList className="grid w-full grid-cols-2">
+                  <TabsTrigger value="standard" className="flex items-center gap-2">
+                    <User className="w-4 h-4" />
+                    משחק רגיל
+                  </TabsTrigger>
+                  <TabsTrigger value="kahoot" className="flex items-center gap-2">
+                    <Users className="w-4 h-4" />
+                    משחק Kahoot
+                  </TabsTrigger>
+                </TabsList>
+              </Tabs>
+              {gameMode === 'kahoot' && (
+                <Alert>
+                  <AlertDescription>
+                    במשחק Kahoot, תוכל להזמין שחקנים מרובים לשחק יחד בזמן אמת!
+                    ניתן לסרוק קוד QR או להזין קוד חדר כדי להצטרף.
+                  </AlertDescription>
+                </Alert>
+              )}
+            </div>
 
             {/* Categories Selection */}
             <div className="space-y-4">
@@ -299,7 +437,10 @@ export default function GameSetupPage() {
               className="w-full"
               size="lg"
             >
-              {loading ? 'מכין משחק...' : 'התחל משחק!'}
+              {loading
+                ? (gameMode === 'kahoot' ? 'יוצר חדר...' : 'מכין משחק...')
+                : (gameMode === 'kahoot' ? 'צור חדר Kahoot!' : 'התחל משחק!')
+              }
             </Button>
           </CardContent>
         </Card>
